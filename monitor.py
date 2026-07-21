@@ -17,8 +17,43 @@ RSS_FEEDS = [
     }
 ]
 
+HOUSING_WORDS = [
+    "woning", "woningen", "woningmarkt", "woonmarkt", "wooncrisis",
+    "huis", "huizen", "huisvesting", "volkshuisvesting",
+    "huur", "huren", "huurder", "huurders", "huurwoning", "huurwoningen",
+    "sociale huur", "middenhuur", "vrije sector", "betaalbaar wonen",
+    "koopwoning", "koopwoningen", "hypotheek", "doorstroming",
+    "woningbouw", "nieuwbouw", "bouwproject", "bouwlocatie", "woondeal"
+]
+
+HOMELESS_WORDS = [
+    "dakloos", "dakloosheid", "thuisloos", "thuisloosheid",
+    "opvang", "maatschappelijke opvang", "nachtopvang", "crisisopvang"
+]
+
+REALESTATE_WORDS = [
+    "vastgoed", "belegger", "beleggers", "institutionele belegger",
+    "projectontwikkelaar", "ontwikkelaar", "portefeuille",
+    "transactie", "transacties", "vastgoeddeal", "woningbelegger"
+]
+
+POLICY_WORDS = [
+    "minister", "kamer", "tweede kamer", "beleid", "wet", "wetsvoorstel",
+    "regeling", "ministerie", "staatssecretaris", "volkshuisvesting",
+    "woonbeleid", "huurbeleid", "regiewet", "woonminister"
+]
+
+IRRELEVANT_WORDS = [
+    "voetbal", "sport", "tennis", "wielrennen", "festival", "muziek",
+    "songfestival", "weer", "verkeer", "files", "brand", "moord",
+    "verkiezing", "buitenland", "oekraïne", "gaza"
+]
+
 def clean_text(value):
-    return (value or "").strip()
+    return " ".join((value or "").strip().split())
+
+def contains_any(text, words):
+    return any(word in text for word in words)
 
 def make_tags(title, summary, source_category):
     text = f"{title} {summary}".lower()
@@ -27,22 +62,41 @@ def make_tags(title, summary, source_category):
     matched_angles = []
     labels = []
 
-    if any(w in text for w in ["woning", "woningen", "huur", "huren", "huurder", "huurders", "koopwoning", "koopwoningen", "hypotheek"]):
+    has_housing = contains_any(text, HOUSING_WORDS)
+    has_homeless = contains_any(text, HOMELESS_WORDS)
+    has_realestate = contains_any(text, REALESTATE_WORDS)
+    has_policy = source_category == "policy" or contains_any(text, POLICY_WORDS)
+
+    if has_housing:
         matched_profiles.append("woningmarkt")
 
-    if any(w in text for w in ["dakloos", "dakloosheid", "opvang", "maatschappelijke opvang", "thuisloos"]):
+    if has_homeless:
         matched_profiles.append("dakloosheid")
 
-    if any(w in text for w in ["vastgoed", "belegger", "beleggers", "portefeuille", "transactie", "transacties"]):
+    if has_realestate:
         matched_profiles.append("vastgoedmarkt_en_transacties")
 
-    if source_category == "policy" or any(w in text for w in ["minister", "kamer", "beleid", "wet", "wetsvoorstel", "volkshuisvesting"]):
+    if has_policy:
         matched_angles.append("beleid")
 
     if matched_profiles:
         labels.append("priority")
 
     return matched_profiles, matched_angles, labels
+
+def is_relevant(title, summary, source_category):
+    text = f"{title} {summary}".lower()
+
+    has_housing = contains_any(text, HOUSING_WORDS)
+    has_homeless = contains_any(text, HOMELESS_WORDS)
+    has_realestate = contains_any(text, REALESTATE_WORDS)
+    has_policy = source_category == "policy" and contains_any(text, HOUSING_WORDS + HOMELESS_WORDS + REALESTATE_WORDS + POLICY_WORDS)
+    has_irrelevant = contains_any(text, IRRELEVANT_WORDS)
+
+    if has_irrelevant and not (has_housing or has_homeless or has_realestate):
+        return False
+
+    return has_housing or has_homeless or has_realestate or has_policy
 
 def parse_feed(feed_conf):
     parsed = feedparser.parse(feed_conf["url"])
@@ -57,6 +111,9 @@ def parse_feed(feed_conf):
         published = clean_text(
             getattr(entry, "published", "") or getattr(entry, "updated", "")
         )
+
+        if not is_relevant(title, summary, feed_conf["source_category"]):
+            continue
 
         matched_profiles, matched_angles, labels = make_tags(
             title, summary, feed_conf["source_category"]
@@ -76,7 +133,7 @@ def parse_feed(feed_conf):
             "matched_angles": matched_angles,
             "score": 10 + len(matched_profiles) * 3 + len(matched_angles) * 2,
             "labels": labels,
-            "entity_type": "Activiteit" if feed_conf["source_id"] == "tweede_kamer" else None,
+            "entity_type": None,
             "political_context": "Rijksbeleid" if feed_conf["source_category"] == "policy" else None
         }
         items.append(item)
@@ -100,7 +157,7 @@ def main():
         encoding="utf-8"
     )
 
-    print(f"{len(all_items)} items geschreven naar data/latest.json")
+    print(f"{len(all_items)} relevante items geschreven naar data/latest.json")
 
 if __name__ == "__main__":
     main()
