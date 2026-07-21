@@ -39,7 +39,15 @@ SEARCH_TERMS = [
     "\"sociale huur\"",
     "vastgoed",
     "woning",
-    "woningmarkt",
+    "woningmarkt",  
+    "tweede kamer volkshuisvesting",
+    "tweede kamer woningnood",
+    "tweede kamer wooncrisis",
+    "tweede kamer sociale huur",
+    "tweede kamer woningcorporaties",
+    "tweede kamer grondbeleid",
+    "tweede kamer huurtoeslag",
+    "tweede kamer dakloosheid",
 ]
 
 RECHTSPRAAK_TERMS = [
