@@ -1,6 +1,6 @@
 [
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -17,7 +17,7 @@
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -34,7 +34,7 @@
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -44,14 +44,16 @@
     "published_at": "Tue, 21 Jul 2026 08:40:50 +0200",
     "raw_text": "<p>Rijkswaterstaat verwacht binnen twee weken te handhaven op het verbod voor vrachtverkeer op de Merwedebrug. Daarvoor worden bij de brug camera's geplaatst. De boete bij een overtreding bedraagt 500 euro.</p>\n        <p>Hoewel de Merwedebrug sinds afgelopen zaterdag voor onbepaalde tijd dicht is voor vrachtverkeer, rijden er nog steeds <a href=\"https://nos.nl/artikel/2623745-toch-veel-vrachtverkeer-over-onveilige-merwedebrug-ondanks-verbod\">veel vrachtwagens</a> over de brug. Rijkswaterstaat deed gisteren \"een dringend beroep\" op vrachtwagenchauffeurs en transporteurs om geen gebruik te maken van de brug.</p>\n        <p>Bij de brug komen ANPR-camera's die automatisch kentekenplaten<strong> </strong>lezen. Rijkswaterstaat gaat samen met de politie en het Openbaar Ministerie handhaven, schrijft <a href=\"https://www.omroepbrabant.nl/nieuws/6019040/niet-de-politie-maar-rijkswaterstaat-gaat-handhaven-op-merwedebrug\">Omroep Brabant</a>.</p>\n        <p>De Merwedebrug bij Gorinchem verbindt de A27 tussen Brabant en Zuid-Holland. Het is een belangrijke verkeersader voor vrachtwagens die vanuit de omgeving van Breda onderweg zijn naar Utrecht.</p>\n        <p>Omdat het staal op verschillende plekken minder sterk is dan gedacht, <a href=\"https://nos.nl/artikel/2623504-merwedebrug-voor-onbepaalde-tijd-dicht-voor-vrachtverkeer-vanwege-verzwakt-staal\">sloot Rijkswaterstaat</a> de brug tussen Sleeuwijk en Gorinchem voor vrachtverkeer. De veiligheid zou niet meer gegarandeerd kunnen worden.</p>\n        <p>De verzwakte staalconstructie kwam aan het licht bij een controle. Door de druk van het zware verkeer bestaat het risico dat de stalen platen van de boog vervormen, wat gevolgen kan hebben voor de constructie. De brug is toe aan vervanging en er werd al onderhoud gepleegd aan de brug om hem veilig te houden.</p>\n        <p>In 2016 ging de brug al uit voorzorg dicht. Toen waren er haarscheurtjes gevonden in de draagbalken. De afsluiting duurde destijds bijna drie maanden.</p>\n        <p>Personenauto's, motoren en bestelbusjes mogen nu nog wel over de brug. Ook lijnbussen en hulpdiensten zijn uitgezonderd van het verbod. Het vrachtverkeer wordt omgeleid via de A16 en de A2. Vervoer van gevaarlijke stoffen gaat via de A2.</p>\n        <h2>Nieuwe brug</h2>\n        <p>De voorbereidingen voor de bouw van de <a href=\"https://nos.nl/artikel/2623504-merwedebrug-voor-onbepaalde-tijd-dicht-voor-vrachtverkeer-vanwege-verzwakt-staal\">nieuwe Merwedebrug</a>, die deze zomer begint, zijn in volle gang. Er komt eerst een nieuwe brug naast de bestaande. Zodra die klaar is, wordt de oude brug afgebroken en komt op die plek een tweede nieuwe brug.</p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -68,7 +70,7 @@
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -78,14 +80,16 @@
     "published_at": "Tue, 21 Jul 2026 06:00:01 +0200",
     "raw_text": "<p>Het Trimbos-instituut gaat nieuw onderzoek doen naar zelfmedicatie. Het gaat hierbij om mensen die online medicatie kopen, zonder toezicht van een arts. Het Trimbos wil achterhalen hoe groot deze groep is en waarom mensen hun heil zoeken bij online medicatie.</p>\n        <p>Het Trimbos deed eerder al onderzoek naar het online aanbod van deze middelen, maar er is volgens het instituut nog geen helder beeld van wie de mensen zijn die hiervan gebruikmaken en waarom ze dit doen. \"Het kan zijn dat deze mensen wel zorg hebben gehad van een arts, maar uit beeld zijn verdwenen\", zegt Laura Smit-Rigter. Zij is landelijk coördinator van het Drugs Informatie en Monitoring Systeem van het Trimbos-instituut.</p>\n        <p>Het Trimbos wil kijken hoe deze gebruikers weer terug naar de reguliere zorg kunnen worden begeleid. \"Maar het kan ook zijn dat het om mensen gaat die geen vertrouwen hebben in de zorg.\"</p>\n        <h2>Sterfgevallen</h2>\n        <p>Het Trimbos voert dit onderzoek uit in opdracht van minister van Volksgezondheid Sophie Hermans. \"De afgelopen periode is Nederland opgeschrikt door diverse berichten over de verkoop van (designer)drugs en (namaak)geneesmiddelen en mogelijke sterfgevallen die daarmee verband houden\", schrijft de minister in een Kamerbrief.</p>\n        <p>Afgelopen najaar werd bekend dat tientallen sterfgevallen mogelijk verband hielden met medicatie van de website <a href=\"https://nos.nl/nieuwsuur/artikel/2603870-mogelijk-tientallen-doden-door-funcaps-waarom-greep-niemand-in\">Funcaps</a>. Die site en tientallen andere zijn inmiddels <a href=\"https://nos.nl/artikel/2610682-tientallen-websites-offline-gehaald-vanwege-aanbieden-designerdrugs\">offline gehaald</a>, maar vaak gaan de sites weer verder onder een andere naam.</p>\n        <p>Corine Bethlehem, toxicoloog in het Erasmus MC, ziet steeds meer patiënten die kiezen voor zelfmedicatie via dit soort sites. Zij bestellen bijvoorbeeld benzodiazepinen, ook wel 'benzo's' genoemd.<em><strong> </strong></em>Die hebben een sterk kalmerende en spierverslappende werking.</p>\n        <p>\"Verder zien we een toename in zelfmedicatie van oxycodon. Dit is een zeer sterke, morfineachtige pijnstiller die wordt voorgeschreven bij hevige pijn.\"</p>\n        <h2>Namaakmedicatie</h2>\n        <p>De risico's hiervan zijn groot, zegt Smit-Rigter van het Trimbos. Niet alleen omdat er geen arts bij betrokken is, maar ook omdat de online middelen niet altijd uit een apotheek komen. \"Het kan om namaakmedicatie gaan. En dan kan de dosering of samenstelling van het middel totaal anders zijn. En dat kan levensgevaarlijk zijn.\"</p>\n        <p>Het bestaan van designerdrugs is niet nieuw. \"Wat wel nieuw is, is dat je op een heel laagdrempelige manier aan deze medicatie kan komen,\" zegt Smit-Rigter. \"Niet lang geleden verliepen bestellingen via het dark web en moest je betalen met crypto. Tegenwoordig zijn er websites waar je met iDEAL kan betalen. De pakketjes worden gewoon thuis bezorgd.\"</p>\n        <p><em>Regina Hobé verloor twee jaar geleden haar zoon Joshua (24). Een combinatie van chemische pillen die hij online had besteld, werd hem fataal. Zij schreef een boek over deze zware periode:</em></p>\n        <p>Toxicoloog Bethlehem voorspelt dat deze zelfmedicatie een serieus probleem gaat worden in de zorg. Zorgprofessionals moeten in actie komen, vindt ze. \"We moeten meer gaan waarschuwen voor de gevolgen en het gesprek aangaan met deze groep. Waarom gebruiken ze deze medicatie en waarom gaan ze niet naar de huisarts?\"</p>\n        <p>Volgens haar zouden artsen ook alerter moeten worden op het gebruik van deze stoffen. \"De focus moet op herkenning komen te liggen.\" Smit-Rigter is het daarmee eens. Naast het aanpakken van de websites, moeten artsen en apothekers meer prioriteit geven aan dit onderwerp, vindt ze. </p>\n        <p>De resultaten voor het Trimbos-onderzoek worden in de loop van volgend jaar verwacht.</p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -95,14 +99,16 @@
     "published_at": "Tue, 21 Jul 2026 04:14:40 +0200",
     "raw_text": "<p>De 108ste editie van de Nijmeegse Vierdaagse is vanochtend in alle vroegte van start gegaan. Om 04.00 uur vertrokken de eerste wandelaars voor de 50 kilometer vanuit het centrum van Nijmegen. Iets later in de ochtend hebben ook de lopers voor de andere afstanden hun eerste stappen gezet.</p>\n        <p><em>Bekijk hier de start:</em></p>\n        <p>Dit jaar doen ruim 45.000 mensen mee aan de wandeltocht met deelnemers uit meer dan 70 landen. De laatste jaren stijgt ook het aantal jongere deelnemers. In 2016 was nog 7,5 procent van de deelnemers aan de Vierdaagse tussen de 21 en 30 jaar. Sindsdien steeg het percentage twintigers bijna ieder jaar, tot nu 20,5 procent.</p>\n        <p><em>Daar schreven we eerder dit artikel over:</em></p>\n        <p>Vandaag op 'de dag van Elst' gaat de route over de Waalbrug de Betuwe in. De eerste wandeldag in de Vierdaagse staat ook wel bekend als 'blauwe dinsdag'.</p>\n        <p>Het centrum van Elst is blauw versierd en lopers worden onthaald door dweilorkesten, straatzangers en duizenden toeschouwers. Het is ook nog eens dubbel feest, omdat Elst 1300 jaar bestaat.</p>\n        <p>De organisatie van de Vierdaagse heeft dit jaar een deel van de route op vrijdag aangepast. Al jaren lopen tienduizenden deelnemers op de laatste dag van het wandelevenement over de Elstweg, de Doctor Moonsweg en de Jan van Daalstraat in Beers, maar dit jaar dus niet.</p>\n        <p><em>De wandelroute bij de 40 en 50 kilometer is dit jaar iets anders dan gebruikelijk:</em></p>\n        <p>Volgens de organisatie is het aanpassen van de route nodig om de verkeersveiligheid te waarborgen. Een deel van de bewoners van het Brabantse dorp is daar zo teleurgesteld over, dat er handtekeningen worden ingezameld om volgend jaar de route wel weer door de straten van Beers te krijgen. De gemeente heeft laten weten volgend jaar opnieuw de route te zullen beoordelen.</p>\n        <h2>Via Gladiola</h2>\n        <p>De Vierdaagse eindigt vrijdag. Traditiegetrouw is de intocht van de lopers op de Via Gladiola, de bijnaam van de Sint-Annastraat, in Nijmegen. Bij de finish worden de wandelaars onthaald door duizenden toeschouwers en overladen met gladiolen.</p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -112,14 +118,16 @@
     "published_at": "Sun, 19 Jul 2026 17:23:55 +0200",
     "raw_text": "<p>België overweegt een order voor twee oorlogsschepen bij de Nederlandse scheepsbouwer Damen in te trekken. Dat kan opnieuw een grote tegenslag betekenen voor het bedrijf.</p>\n        <p>België heeft twee fregatten besteld bij Damen, maar minister Francken van Defensie vindt dat de levering te lang duurt en dat de schepen te duur worden. Het eerste fregat wordt op zijn vroegst in 2033 geleverd en de prijs is opgelopen van 600 miljoen naar 1,3 miljard euro per stuk, aldus Francken.</p>\n        <p>\"We hebben nu nog fregatten, maar die zitten helemaal op het einde van hun levenstermijn\", zei de minister bij de Vlaamse zender VTM. \"We hebben echt dringend nieuwe nodig.\" Daarom gaat hij andere landen benaderen die marineschepen bouwen. In Europa zijn dat Frankrijk, Duitsland, Spanje, Italië en Turkije. In oktober wil hij de knoop doorhakken.</p>\n        <h2>Anti-Submarine Warfare Fregatten</h2>\n        <p>De twee fregatten wil België aanschaffen voor het Belgisch-Nederlandse marinepartnerschap, net als zes mijnenjagers. Het gaat om ASWF (Anti-Submarine Warfare) Fregatten, die de huidige multipurpose of M-fregatten moeten vervangen.</p>\n        <p>Het liefst gaat Francken verder met Damen, maar de prijs en de leveringstijd vormen een groot struikelblok. \"Dan hebben we een groot probleem.\"</p>\n        <h2>Tegenslag</h2>\n        <p>Onlangs trok <a href=\"https://nos.nl/artikel/2620038-duitsland-stapt-uit-miljardendeal-met-scheepsbouwer-damen\">Duitsland</a> een miljardenorder bij Damen in. Zes fregatten werden afbesteld, eveneens vanwege vertraging in de levering en kostenstijging.</p>\n        <p>Dat is onder meer het gevolg van de snelle ontwikkeling van nieuwe wapensystemen, waardoor het ontwerp van de <a href=\"https://nos.nl/artikel/2574308-scheepsbouwer-damen-krijgt-270-miljoen-staatssteun-om-uit-de-problemen-te-blijven\">schepen</a> moet worden aangepast. Wat de gevolgen zijn als ook België afhaakt, is nog niet duidelijk.</p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -129,14 +137,16 @@
     "published_at": "Mon, 20 Jul 2026 21:49:05 +0200",
     "raw_text": "<p>Drie douaniers die in april werden aangehouden op verdenking van het stelen van informatie uit de computersystemen van hun werkgever, mogen hun strafzaak in vrijheid afwachten. Dat heeft de rechtbank in Rotterdam bepaald.</p>\n        <p>Het gaat om twee douaniers (26 en 45 jaar) uit Rotterdam en een (41 jaar) uit Capelle aan den IJssel. Zij werken samen op een afdeling van de douane die de selectie doet voor controles.</p>\n        <p>De douaniers worden ervan verdacht dat ze zich hebben laten omkopen, dat ze hun ambtsgeheim hebben geschonden, computervredebreuk hebben gepleegd en de invoer van cocaïne hebben voorbereid. Twee van hen worden ook vervolgd voor witwassen.</p>\n        <h2>'Focussen op Vlissingen'</h2>\n        <p>Na een tip bij de inlichtingendienst van de politie begon een langlopend onderzoek naar de douaniers. Tijdens dat onderzoek zijn gesprekken opgenomen en werd een undercoveragent ingezet. Twee verdachten spraken volgens justitie onder meer over \"invoer, handeltjes, de boel overnemen bij de douane en focussen op Vlissingen\". Ook de broer van een van de douaniers zou betrokken zijn geweest.</p>\n        <p>De mannen <a href=\"https://nos.nl/artikel/2610431-douaniers-aangehouden-voor-computervredebreuk-en-schenden-ambtsgeheim\">werden aangehouden</a> door het Combiteam Havens. Dat is een samenwerkingsverband van de politie, de Fiscale Inlichtingen- en Opsporingsdienst (FIOD), de Rijksrecherche en het Openbaar Ministerie. Zij doen samen onderzoek naar zware criminaliteit in de havens.</p>\n        <p>Bij de aanhouding werden panden in de regio Rotterdam doorzocht en werden gegevensdragers, contant geld en luxegoederen in beslag genomen. De douaniers werden na hun aanhouding op non-actief gezet door hun werkgever.</p>\n        <h2>Gebruik undercoveragent</h2>\n        <p>Volgens de rechter is er onvoldoende reden om de douaniers nu vast te houden. De verdenkingen tegen de mannen, die geen strafblad hebben, gelden nog wel. Zo zou uit een gesprek tussen een van de verdachten en de undercoveragent het beeld kunnen ontstaan van een \"drie-eenheid die geld wilde verdienen met informatie\", aldus de rechtbank. De eveneens aangehouden broer kwam eerder al op vrije voeten.</p>\n        <p>De advocaten van de verdachten waren in de rechtbank kritisch op de duur van het politieonderzoek en het gebruik van een undercoveragent. Een van de verdachten claimt dat hij door de inzet van de undercoveragent PTSS heeft opgelopen.</p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -153,7 +163,7 @@
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -163,14 +173,16 @@
     "published_at": "Mon, 20 Jul 2026 16:28:43 +0200",
     "raw_text": "<p>Het Openbaar Ministerie heeft een voorwaardelijke gevangenisstraf van een jaar geëist tegen Corné H. voor het gijzelen van twee medewerkers in de gevangenis in Vught.</p>\n        <p>De 30-jarige H. verbleef op de psychiatrische afdeling van de gevangenis na zijn veroordeling voor de gijzeling van cafépersoneel in Ede <a href=\"https://nos.nl/artikel/2514740-centrum-ede-afgesloten-vanwege-gijzeling-in-cafe\">in maart 2024</a>.</p>\n        <p>Op <a href=\"https://nos.nl/artikel/2593306-twee-medewerkers-paar-uur-gegijzeld-in-gevangenis-vught\">Sinterklaasavond</a> 2025 gijzelde H. personeelsleden van de afdeling met aardappelschilmesjes die hij had gekregen om een smoothie te maken. Hij eiste onder meer medicijnen en overplaatsing naar een andere gevangenis. Een politieonderhandelaar kreeg H. uiteindelijk zover om zich over te geven.</p>\n        <p>H. had voor de gijzeling in Ede al een gevangenisstraf van negen maanden en tbs met dwangverpleging uitgezeten. Hij verbleef in Vught in afwachting van plaatsing in een tbs-kliniek.</p>\n        <h2>'Tbs niet onderbreken'</h2>\n        <p>Het OM <a href=\"https://www.om.nl/actueel/nieuws/2026/07/20/voorwaardelijke-celstraf-geeist-voor-gijzeling-op-afdeling-pi-vught\">zegt</a> bij het bepalen van de strafeis nadrukkelijk te hebben gekeken naar de huidige situatie van H. en in het bijzonder zijn psychische problematiek. Inmiddels zit H. in een <a href=\"https://nos.nl/artikel/2603284-gijzelnemer-corne-h-krijgt-geen-voorrang-in-tbs-kliniek-bepaalt-rechter\">tbs-kliniek</a>, en het OM erkent het belang van de eerder opgelegde tbs-maatregel.</p>\n        <p>Een onvoorwaardelijke gevangenisstraf zou betekenen dat de eerder opgelegde tbs-maatregel moet worden onderbroken. \"Na het uitzitten van die straf is het maar zeer de vraag of verdachte daarna direct weer in een tbs-kliniek terecht kan\", aldus het OM. \"</p>\n        <p>Het OM eist een proeftijd van twee jaar. Als H. opnieuw strafbare feiten pleegt of de voorwaarden niet naleeft, moet hij dan alsnog de gevangenis in. Ook eist de officier van justitie een schadevergoeding van H. die hij aan de betrokkenen moet betalen.</p>\n        <h2>Spijt</h2>\n        <p>H. zelf noemde de gijzeling in Vught een impulsieve daad. \"Ik had niet gedacht dat het na Ede nog een keer zou voorkomen\", zei hij tegen de rechter, <a href=\"https://www.gld.nl/nieuws/8500065/gijzelnemer-corne-h-hoort-jaar-celstraf-eisen-niet-gedacht-dat-het-nog-eens-zou-gebeuren\">schrijft Omroep Gelderland</a>.</p>\n        <p>Hij zei verder spijt te hebben van zijn daad. \"Het had eigenlijk nooit mogen gebeuren. Maar het is gebeurd en dat vind ik op zijn minst gezegd heel spijtig. Het heeft voor heel veel mensen een lange nasleep.\"</p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -180,14 +192,16 @@
     "published_at": "Mon, 20 Jul 2026 13:42:53 +0200",
     "raw_text": "<h2>Scheepsbouwer Damen: nóg een tegenvaller</h2>\n        <p>Nadat scheepsbouwer Damen onlangs al een flinke tegenvaller moest incasseren toen het een Duitse order verloor, dreigt nu opnieuw een tegenvaller. De Belgische minister van Defensie, Theo Francken, <a href=\"https://nos.nl/artikel/2623643-scheepsbouwer-damen-verliest-mogelijk-belgische-fregattenorder\">onderzoekt</a> alternatieven voor de Nederlandse scheepsbouwer bij de aanschaf van nieuwe fregatten. België bestelde eerder twee fregatten bij Damen, maar de kosten lopen op en de oplevering loopt vertraging op. Wat betekent dit voor de toekomst van de Nederlandse scheepsbouwer?</p>\n        <h2>Medische crowdfunding onethisch?</h2>\n        <p>Wat als je een medische behandeling nodig hebt die niet wordt vergoed? Steeds meer mensen starten dan een medische crowdfunding. Volgens deskundigen hebben crowdfundingplatforms én de overheid een verantwoordelijkheid. Maar hoe ziet die plicht er in de praktijk uit en wie bepaalt welke inzamelingsacties verantwoord zijn?</p>\n        <h2>Ondergrondse hyperloop</h2>\n        <p>In onze nieuwe zomerserie 'Ondergronds' kijken we naar ondergrondse oplossing voor bovengrondse problemen. In aflevering 2: de hyperloop.</p>\n        <p>Capsules die door vacuümbuizen reizen met snelheden die bijna die van een vliegtuig evenaren: dat is het idee achter de hyperloop. In Veendam wordt al jaren aan deze technologie gewerkt. Hoe ver is de ontwikkeling? En is de hyperloop een realistisch alternatief voor reizen in de toekomst?</p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -204,7 +218,7 @@
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -214,14 +228,16 @@
     "published_at": "Mon, 20 Jul 2026 11:43:37 +0200",
     "raw_text": "<p>De Provinciale Staten in Brabant onderbreekt volgende maand de vakantie voor een spoeddebat over het intrekken van de vergunningen van vijf pluimveehouders. Het debat komt er op verzoek van zeven oppositiepartijen en staat gepland op 14 augustus.</p>\n        <p>De Brabantse politici gaan dan in debat met het college van Gedeputeerde Staten, het dagelijks bestuur van de provincie.</p>\n        <p>Eind vorige week werd bekend dat Noord-Brabant de stikstofvergunningen van vijf agrarische bedrijven vlak bij kwetsbare natuurgebieden wil intrekken. Volgens de provincie is het een ingrijpende, maar noodzakelijke maatregel. Door rechterlijke uitspraken heeft de provincie geen andere optie, zegt gedeputeerde Saskia Boelema (D66).</p>\n        <h2>'Voor de bus gegooid'</h2>\n        <p>De BBB, 50PLUS, JA21, ChristenUnie-SGP, CDA, PVV en Forum voor Democratie hadden verzocht om \"op de kortst mogelijke termijn\" hierover te debatteren, schrijft <a href=\"https://www.omroepbrabant.nl/nieuws/6018969/provincie-terug-van-reces-om-intrekken-vergunningen-kippenboeren\">Omroep Brabant</a>.</p>\n        <p>De oppositiepartijen vinden het intrekken van vergunningen \"buiten alle proporties\" en zeggen ook dat dit \"een levensgevaarlijk precedent\" schept. Het debat hierover kan volgens de zeven partijen niet wachten tot de eerstvolgende reguliere Statenvergadering in september.</p>\n        <p>BBB-fractievoorzitter Marco Havermans zegt dat hij liever eerder dan 14 augustus zou willen debatteren. \"Net voor de vakantie worden deze ondernemers voor de bus gegooid. Zij moeten zo snel mogelijk weten waar ze aan toe zijn\", aldus Havermans.</p>\n        <p>Omdat veel Statenleden en gedeputeerden op vakantie zijn, is er volgens hem voor gekozen iets meer tijd te nemen. \"Zodat de inhoudelijk gedeputeerden en de commissaris van de Koning ook bij het debat kunnen zijn.\"</p>\n        <h2>Intrekken van vergunning</h2>\n        <p>Vorig jaar oordeelde de rechter dat de provincie maatregelen moet nemen om de stikstofuitstoot van de veeboeren binnen een jaar fors terug te dringen, zodat de natuur niet verder achteruitgaat. Omdat gesprekken met de betrokken partijen geen uitvoerbare alternatieven opleverden, zegt Brabant nu niets anders te kunnen dan overgaan tot het intrekken van de vergunningen.</p>\n        <p>De ondernemersorganisatie voor land- en tuinbouw (LTO) reageert boos. \"Ondernemers die jarenlang keurig meewerken, investeren en hun uitstoot aantoonbaar terugdringen, worden nu door hun eigen overheid in de steek gelaten\", zegt LTO-voorzitter Ger Koopmans.</p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -231,14 +247,16 @@
     "published_at": "Mon, 20 Jul 2026 11:30:02 +0200",
     "raw_text": "<p>Precies een halve eeuw geleden, op 20 juli 1976, landde de eerste van twee zware Viking-landers op Mars. Op aarde vielen vluchtleiders elkaar onder luid gejuich in de armen. Extatisch zagen ze de eerste foto ooit van het Marsoppervlak langzaam op hun schermen verschijnen, beeldlijn voor beeldlijn. Een buitenaardse zandwoestijn vol stenen.</p>\n        <p>Daarna gingen Viking 1, en wat later ook Viking 2, op zoek naar leven, en het gejuich viel stil. Ze vonden niets.</p>\n        <p>Maar was dat wel zo? Inmiddels zetten planeetwetenschappers daar vraagtekens bij. \"Sommige resultaten zijn mogelijk verkeerd geïnterpreteerd\", zegt astrobioloog Inge Loes ten Kate van de Universiteit Utrecht nu. Ze wijdt zich al decennia aan het onderzoek naar de rode planeet en zag de inzichten gaandeweg veranderen. Ze pleit nu voor een nieuwe missie in het spoor van de Vikings, om de klus alsnog te klaren.</p>\n        <p>De Viking-landers waren in 1976 gewapend met een compleet minilaboratorium aan boord. Ze konden Marsgrond opscheppen en analyseren. Er werden water, voedingsstoffen en warmte toegevoegd om te zien of er iets zou reageren. Dat gebeurde ook bij alle drie de experimenten die daadwerkelijk naar leven zochten. Maar, was het oordeel, dat was vals alarm. Die reacties konden ook een niet-biologische oorzaak hebben.</p>\n        <p><em>De euforie was groot toen Viking 1 op 20 juli 1976 op Mars landde:</em></p>\n        <p>Ze waren zo voorzichtig omdat een vierde experiment geen organische moleculen (koolwaterstoffen) vond, maar koolchloormoleculen. Als er leven was geweest, was de gedachte, zouden ze organische moleculen hebben gevonden. De koolchloordetectie werd uitgelegd als resten van het schoonmaakmiddel dat op aarde gebruikt was om de lander te ontsmetten.</p>\n        <h2>Onbedoeld verdronken</h2>\n        <p>Maar een ontdekking in 2009 maakte korte metten met de schoonmaakmiddeltheorie. De Phoenix-lander vond chloorhoudende mineralen op Mars. Die kunnen met organische moleculen reageren in het Vikinginstrument en zo dezelfde koolchloorverbindingen maken die in 1976 waren gevonden. Een experiment met een kopie van dat Viking-minilab bevestigde dat de oude landers mogelijk meer hadden ontdekt dan aanvankelijk gedacht.</p>\n        <p>Sterker, misschien hebben de Vikings eventuele Marsmicroben wel onbedoeld gedood door allerlei voedingstoffen en water toe te voegen. \"Als er bacteriën waren, zijn die misschien verdronken\", oppert Ten Kate. \"Ondanks dat er goed over nagedacht was, want men wist dat Mars ontzettend droog was, bevatten de toegevoegde stoffen misschien toch te veel water. Op aarde hebben we ook microben die hun water rechtstreeks uit de atmosfeer opnemen. Als je die onderdompelt, gaan ze ook dood.\"</p>\n        <p>Latere Marsrovers vonden ook bewijs voor organische moleculen. Afgelopen september vond rover Perseverance gesteente met strepen, puntjes en vlekken in verschillende kleuren. Op aarde worden die vaak achtergelaten door microbiële stofwisseling.</p>\n        <p>Om meer zekerheid te krijgen zou er eigenlijk een nieuwe Vikingmissie moeten komen, bepleit Ten Kate. \"Er is nooit meer een soortgelijke missie geweest die echt op zoek gaat naar die microben. Niemand wil zich eraan branden, lijkt het. Bang om naar iets te zoeken dat er niet is. Maar er zijn steeds meer signalen dat het er wel is.\"</p>\n        <h2>'Life finds a way'</h2>\n        <p>Wat zo'n missie ook in de weg zit, zijn internationale 'planetary protection'-afspraken die regelen dat juist op plaatsen waar leven het waarschijnlijkst is, paradoxaal genoeg niet gezocht mag worden om dat mogelijke leven niet te verstoren. Daarnaast is de Mars Sample Return-missie, die buisjes met veelbelovende steen- en grondmonsters op zou gaan halen, in de VS wegbezuinigd.</p>\n        <p>Enige hoop is gevestigd op de Europese Rosalind Franklin-rover. Die gaat volgens plan in 2030 op zoek naar biologische moleculen en sporen van leven. \"Als het ooit is ontstaan, toen Mars nog veel meer op de aarde leek, met zeeën en rivieren en een dichte atmosfeer, heeft het zich op sommige plaatsen wellicht kunnen aanpassen toen de atmosfeer en dat water grotendeels verdwenen\", denkt de planeetwetenschapper. \"<em>Life finds a way. </em>Ook op aarde hebben sommige bacteriën zich aangepast aan de meest extreme omstandigheden.\"</p>\n        <p>De Rosalind Franklin-rover heeft een boor die tot twee meter diep monsters kan nemen. Het is de vraag of dat diep genoeg is. \"Misschien zit het honderd meter diep. Dan ga je het niet vinden.\"</p>\n        <p>Als er inderdaad weer niets wordt gevonden, is er nog iets te leren van de Viking-missies: \"Voorkom dat je te snel harde conclusies trekt, zoals toen gebeurde. Doordat we Mars steeds beter begrijpen, kunnen we dat hopelijk voorkomen.\"</p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -255,7 +273,7 @@
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -272,7 +290,7 @@
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -289,7 +307,7 @@
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -299,14 +317,16 @@
     "published_at": "Mon, 20 Jul 2026 07:00:01 +0200",
     "raw_text": "<p>Crowdfundingsplatforms controleren nauwelijks of inzamelingsacties misleidende of onbewezen medische claims bevatten. Dat blijkt uit een analyse van <em>Nieuwsuur</em>. Daardoor wordt veel geld gedoneerd voor behandelingen die niet bestaan of behandelingen die niet bewezen effectief zijn.</p>\n        <p>De overheid moet ingrijpen, vinden zorgverzekeraars. \"Het moet voor donateurs en patiënten duidelijk zijn of een behandeling bewezen zorg is, of experimenteel, en wat in Nederland de reguliere behandelopties zijn\", zegt bestuurder Cas Ceulen van zorgverzekeraar VGZ.</p>\n        <p>In Nederland zijn vijf platforms actief waar geld ingezameld wordt voor medische doeleinden. Die acties lopen uiteen van de aanschaf van een rolstoelbus tot het ondergaan van een experimentele operatie over de grens.</p>\n        <p>Artsen bevestigen dat er misinformatie over behandelingen rondgaat bij inzamelingsacties. Zo berichtte <em>Nieuwsuur</em> eerder dit jaar over <a href=\"https://nos.nl/nieuwsuur/artikel/2599975-jonge-vrouwen-naar-buitenland-voor-extreme-buikoperaties-artsen-slaan-alarm\">onbewezen en gevaarlijke buikoperaties in het Spaanse Málaga</a>, die op crowdfundingswebsites als \"levensreddend\" worden gepresenteerd. Volgens Nederlandse artsen zijn ze dat niet.</p>\n        <h2>Kurkumabehandeling tegen kanker</h2>\n        <p>Op het grootste donatieplatform GoFundMe loopt een Nederlandse inzamelingsactie voor een levertransplantatie in het buitenland. Artsen zeggen dat het hoogst onwaarschijnlijk is dat een patiënt naar het buitenland moet voor deze ingreep omdat er geen medisch voordeel is om de transplantatie buiten Nederland te laten doen.</p>\n        <p>Artsen plaatsen ook vraagtekens bij inzamelingen voor nek- en rugstabilisatie-operaties uitgevoerd door een arts in Barcelona. Ook wordt geld ingezameld voor kankerbehandelingen in een Duitse kliniek waar het toedienen van een kurkuma-extract onderdeel van is. Dat zou volgens de kliniek 'anti-kanker'-eigenschappen bevatten. Daar is <a href=\"https://www.wkof.nl/leven-met-kanker/voedingenkankerinfo/helpt-kurkuma-bij-de-behandeling-van-kanker/\">geen bewijs voor</a>.</p>\n        <p>De platforms GoFundMe, Geef, WhyDonate en Steunactie zeggen in een reactie dat ze optreden bij misleiding. Doneeractie.nl reageerde niet op vragen. Geef.nl zegt dat het niet diens verantwoordelijkheid is om medische claims te verifiëren. Ook Steunactie laat weten niet de expertise hiervoor te hebben. \"Wij vertrouwen op de transparantie van de organisator en de kritische blik van de 'crowd'.\"</p>\n        <p><em>Vader Walter en zijn zoon Nick Hazeleger hebben MS. Ze zamelen geld in voor een behandeling in Mexico, al ontbreekt wetenschappelijk bewijs dat die daadwerkelijk zal aanslaan:</em></p>",
     "matched_profiles": [],
-    "matched_angles": [],
-    "score": 10,
+    "matched_angles": [
+      "beleid"
+    ],
+    "score": 12,
     "labels": [],
     "entity_type": null,
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
@@ -323,7 +343,7 @@
     "political_context": null
   },
   {
-    "source_id": "nos",
+    "source_id": "nos_binnenland",
     "source_name": "NOS",
     "source_category": "media",
     "source_priority": "medium",
