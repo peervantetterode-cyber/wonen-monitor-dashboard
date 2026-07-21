@@ -114,26 +114,31 @@ def dedupe(items):
 def main():
     all_items = []
 
+    # vaste RSS-bronnen
     for name, url in SITE_FEEDS.items():
         print(f"Fetching site feed: {name}")
         all_items.extend(fetch_rss(name, url))
         time.sleep(0.3)
 
+    # sites zonder bekende RSS (fallback: auto-detect + scrape)
     for name, url in SCRAPE_SITES.items():
         print(f"Fetching scrape/fallback: {name}")
         all_items.extend(fetch_scrape_fallback(name, url))
         time.sleep(0.3)
 
+    # Google News zoektermen
     for term in SEARCH_TERMS:
         print(f"Fetching search term: {term}")
         all_items.extend(fetch_search_term(term))
         time.sleep(0.3)
 
+    # Rechtspraak.nl (vastgoed / huur / corporaties / sociale huur)
     for term in RECHTSPRAAK_TERMS:
         print(f"Fetching rechtspraak.nl term: {term}")
         all_items.extend(fetch_rechtspraak_term(term))
         time.sleep(0.3)
 
+    # dedupliceren op titel
     all_items = dedupe(all_items)
 
     os.makedirs("output", exist_ok=True)
@@ -150,16 +155,18 @@ def generate_html(items, generated_at):
     for it in items:
         by_source.setdefault(it["source"], []).append(it)
 
-    html = ["<!DOCTYPE html><html lang='nl'><head><meta charset='UTF-8'>",
-            "<title>Woonmonitor Dashboard</title>",
-            "<style>",
-            "body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:24px;background:#fafafa;color:#1a1a1a;}",
-            "h1{font-size:1.6rem;} h2{font-size:1.1rem;border-bottom:2px solid #ddd;padding-bottom:6px;margin-top:32px;}",
-            "ul{list-style:none;padding:0;} li{padding:8px 0;border-bottom:1px solid #eee;}",
-            "a{color:#0645ad;text-decoration:none;} a:hover{text-decoration:underline;}",
-            ".meta{color:#777;font-size:0.85rem;} .ts{color:#999;font-size:0.8rem;}",
-            "</style></head><body>",
-            f"<h1>Woonmonitor Dashboard</h1><p class='meta'>Laatst bijgewerkt: {generated_at}</p>"]
+    html = [
+        "<!DOCTYPE html><html lang='nl'><head><meta charset='UTF-8'>",
+        "<title>Woonmonitor Dashboard</title>",
+        "<style>",
+        "body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:24px;background:#fafafa;color:#1a1a1a;}",
+        "h1{font-size:1.6rem;} h2{font-size:1.1rem;border-bottom:2px solid #ddd;padding-bottom:6px;margin-top:32px;}",
+        "ul{list-style:none;padding:0;} li{padding:8px 0;border-bottom:1px solid #eee;}",
+        "a{color:#0645ad;text-decoration:none;} a:hover{text-decoration:underline;}",
+        ".meta{color:#777;font-size:0.85rem;} .ts{color:#999;font-size:0.8rem;}",
+        "</style></head><body>",
+        f"<h1>Woonmonitor Dashboard</h1><p class='meta'>Laatst bijgewerkt: {generated_at}</p>",
+    ]
 
     for source, entries in by_source.items():
         html.append(f"<h2>{source}</h2><ul>")
