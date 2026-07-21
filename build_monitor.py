@@ -125,21 +125,36 @@ def dedupe(items):
         result.append(it)
     return result
 
-def is_relevant(item):
-    text = f"{item.get('title','')} {item.get('source','')}".lower()
+TRUSTED_HOUSING_SOURCES = [
+    "vastgoedmarkt",
+    "nul20",
+    "stadszaken",
+    "follow the money",
+    "het financieele dagblad",
+    "fd",
+    "bnr",
+    "het parool",
+]
 
-    # sport wegfilteren
-    for bad in SPORT_BLACKLIST:
-        if bad in text:
-            return False
+def is_relevant(item: dict) -> bool:
+    text = " ".join([
+        item.get("title", ""),
+        item.get("summary", ""),
+        item.get("description", ""),
+        item.get("source", ""),
+    ]).lower()
 
-    # alleen houden als er een woon/vastgoed trefwoord in zit
-    for kw in WOON_KEYWORDS:
-        if kw in text:
-            return True
+    # 1. Harde uitsluiting op sport (minder generiek gehouden)
+    if any(stop in text for stop in STOP_WORDS):
+        return False
 
-    # alles zonder trefwoord weggooien
-    return False
+    # 2. Altijd meenemen als de bron een vaste woon/vastgoedbron is
+    source = (item.get("source") or "").lower()
+    if any(src in source for src in TRUSTED_HOUSING_SOURCES):
+        return True
+
+    # 3. Anders: alleen als er een woon/dakloosheid/grond-keyword in zit
+    return any(kw in text for kw in WOON_KEYWORDS)
 
 def main():
     all_items = []
