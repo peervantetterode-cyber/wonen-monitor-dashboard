@@ -63,6 +63,7 @@
     </div>
   </div>
 <script>
+<script>
 (async function () {
   const RUN_FILE = "data/latest.json";
   const priorityList = document.getElementById("priority-list");
@@ -71,21 +72,32 @@
   const realestateList = document.getElementById("realestate-list");
 
   function esc(str) {
-    return String(str ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\"/g, "&quot;");
+    return String(str ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
   function card(item) {
     const labels = item.labels || [];
-    const isPolitics = (item.entity_type || "").toLowerCase() === "activiteit" || ["politics", "policy"].includes(item.source_category || "");
-    const tags = (item.matched_profiles || []).concat(item.matched_angles || []).map(x => `<span class="chip">${esc(String(x).replaceAll('_',' '))}</span>`).join('');
+    const isPolitics =
+      (item.entity_type || "").toLowerCase() === "activiteit" ||
+      ["politics", "policy"].includes(item.source_category || "");
+
+    const tags = (item.matched_profiles || [])
+      .concat(item.matched_angles || [])
+      .map(x => `<span class="chip">${esc(String(x).replaceAll("_", " "))}</span>`)
+      .join("");
+
     return `
       <article class="article">
         <div class="meta">${esc(item.source_name)} · ${esc(item.source_category)} · score ${esc(item.score ?? 0)}</div>
-        <h2><a href="${esc(item.url || '#')}" target="_blank" rel="noopener noreferrer">${esc(item.title)}</a></h2>
-        <p class="summary">${esc((item.summary || '').slice(0, 320))}</p>
+        <h2><a href="${esc(item.url || "#")}" target="_blank" rel="noopener noreferrer">${esc(item.title)}</a></h2>
+        <p class="summary">${esc((item.summary || "").slice(0, 320))}</p>
         <div class="foot">
-          ${labels.includes('priority') ? '<span class="label priority">prioriteit</span>' : ''}
-          ${isPolitics ? '<span class="label policy">kamer/beleid</span>' : ''}
+          ${labels.includes("priority") ? '<span class="label priority">prioriteit</span>' : ""}
+          ${isPolitics ? '<span class="label policy">kamer/beleid</span>' : ""}
           ${item.url ? `<a class="source-link" href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">naar bron</a>` : '<span class="muted">geen bronlink</span>'}
         </div>
         <div class="chips">${tags}</div>
@@ -94,7 +106,7 @@
 
   try {
     const resp = await fetch(RUN_FILE);
-    if (!resp.ok) throw new Error('Kon JSON niet laden');
+    if (!resp.ok) throw new Error("Kon JSON niet laden");
     const items = await resp.json();
 
     const priority = [];
@@ -103,30 +115,45 @@
     const other = [];
 
     items.forEach(item => {
-      const isPriority = (item.labels || []).includes('priority');
-      const isPolitics = (item.entity_type || '').toLowerCase() === 'activiteit' || ['politics', 'policy'].includes(item.source_category || '');
-      const isRealEstate = (item.matched_profiles || []).includes('vastgoedmarkt_en_transacties');
+      const isPriority = (item.labels || []).includes("priority");
+      const isPolitics =
+        (item.entity_type || "").toLowerCase() === "activiteit" ||
+        ["politics", "policy"].includes(item.source_category || "");
+      const isRealEstate = (item.matched_profiles || []).includes("vastgoedmarkt_en_transacties");
+
       if (isPriority) priority.push(item);
       else if (isPolitics) politics.push(item);
       else if (isRealEstate) realestate.push(item);
       else other.push(item);
     });
 
-    document.getElementById('run-summary').textContent = `${items.length} stukken geladen uit data/latest.json`;
-    document.getElementById('kpis').innerHTML = `
+    document.getElementById("run-summary").textContent = `${items.length} stukken geladen uit data/latest.json`;
+    document.getElementById("kpis").innerHTML = `
       <span>Totaal: ${items.length}</span>
       <span>Prioriteit: ${priority.length}</span>
       <span>Politiek/beleid: ${politics.length}</span>
       <span>Vastgoed: ${realestate.length}</span>`;
 
-    priorityList.innerHTML = priority.length ? priority.map(card).join('') : '<p class="muted">Nog geen prioriteitsitems.</p>';
-    otherList.innerHTML = other.length ? other.map(card).join('') : '<p class="muted">Nog geen overige items.</p>';
-    politicsList.innerHTML = politics.length ? politics.map(card).join('') : '<p class="muted">Nog geen politieke items.</p>';
-    realestateList.innerHTML = realestate.length ? realestate.map(card).join('') : '<p class="muted">Nog geen vastgoeditems.</p>';
+    priorityList.innerHTML = priority.length
+      ? priority.slice(0, 8).map(card).join("")
+      : '<p class="muted">Nog geen prioriteitsitems.</p>';
+
+    otherList.innerHTML = other.length
+      ? other.slice(0, 12).map(card).join("")
+      : '<p class="muted">Nog geen overige items.</p>';
+
+    politicsList.innerHTML = politics.length
+      ? politics.slice(0, 6).map(card).join("")
+      : '<p class="muted">Nog geen politieke items.</p>';
+
+    realestateList.innerHTML = realestate.length
+      ? realestate.slice(0, 6).map(card).join("")
+      : '<p class="muted">Nog geen vastgoeditems.</p>';
   } catch (e) {
-    document.getElementById('run-summary').textContent = 'Kon data/latest.json niet laden.';
+    document.getElementById("run-summary").textContent = "Kon data/latest.json niet laden.";
   }
 })();
+</script>
 </script>
 </body>
 </html>
