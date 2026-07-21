@@ -12,10 +12,22 @@ RSS_FEEDS = [
         "url": "https://feeds.nos.nl/nosnieuwsbinnenland"
     },
     {
-        "source_id": "rijksoverheid",
+        "source_id": "rijksoverheid_algemeen",
         "source_name": "Rijksoverheid",
         "source_category": "policy",
         "url": "https://feeds.rijksoverheid.nl/nieuws.rss"
+    },
+    {
+        "source_id": "rijksoverheid_volkshuisvesting",
+        "source_name": "Rijksoverheid Volkshuisvesting",
+        "source_category": "policy",
+        "url": "https://www.rijksoverheid.nl/onderwerpen/volkshuisvesting/nieuws"
+    },
+    {
+        "source_id": "min_vro_nieuws",
+        "source_name": "Ministerie VRO",
+        "source_category": "policy",
+        "url": "https://www.rijksoverheid.nl/ministeries/ministerie-van-volkshuisvesting-en-ruimtelijke-ordening/nieuws"
     }
 ]
 
