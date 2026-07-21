@@ -2,6 +2,7 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
+from urllib.parse import quote, urljoin
 import hashlib
 import json
 import os
@@ -19,20 +20,33 @@ from sources import (
 )
 
 # --------------------------------------------------
-# Config (headers / timeouts)
+# Config
 # --------------------------------------------------
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; WoonmonitorBot/1.0; +https://example.com)"
 }
-TIMEOUT = 10
+TIMEOUT = 15
+
+TWEEDE_KAMER_TERMS = [
+    "volkshuisvesting",
+    "woningnood",
+    "wooncrisis",
+    "sociale huur",
+    "woningcorporaties",
+    "grondbeleid",
+    "huurtoeslag",
+    "dakloosheid",
+]
+
+TWEEDE_KAMER_BASE = "https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0"
+TWEEDE_KAMER_DOCS = "https://opendata.tweedekamer.nl/documentatie/odata-api"
 
 # --------------------------------------------------
-# Keywords: alles uit de Kingma‑tekst, geclusterd
+# Keywords
 # --------------------------------------------------
 
 WOON_KEYWORDS = [
-    # Dakloosheid / mensenrecht / woningnood
     "dakloos", "daklozen", "dakloosheid",
     "thuisloos", "thuislozen", "thuisloosheid",
     "zwerver", "zwervers", "zwerfjongeren",
@@ -46,7 +60,6 @@ WOON_KEYWORDS = [
     "woningnood", "huisvestingscrisis",
     "woningtekort",
 
-    # Volkshuisvesting / sociale huur / wachttijd
     "volkshuisvesting",
     "sociale huur", "sociale huurwoning", "sociale huurwoningen",
     "betaalbare huurwoningen", "betaalbare huur",
@@ -56,7 +69,6 @@ WOON_KEYWORDS = [
     "woningvoorraad", "bestaande woningvoorraad",
     "wachtlijst", "wachttijd", "wachtrij", "inschrijfduur",
 
-    # Woningmarkt / koop / huur / starters
     "woningmarkt", "huizenmarkt",
     "koopwoning", "koopwoningen",
     "huursector", "huurmarkt",
@@ -69,7 +81,6 @@ WOON_KEYWORDS = [
     "huizenprijzen", "huizenprijs", "koopprijzen",
     "overwaarde", "eigenwoningwaarde",
 
-    # Financiering / hypotheken / fiscale regelingen
     "hypotheek", "hypotheken",
     "hypotheekmarkt", "hypotheekschuld",
     "hypotheekrenteaftrek",
@@ -82,7 +93,6 @@ WOON_KEYWORDS = [
     "box 3", "vermogensrendementsheffing",
     "subsidieprogramma", "bouwsubsidies", "bouwsubsidie",
 
-    # Grondbeleid / planbaten / grondprijzen
     "grondbeleid", "grondmarkt",
     "bouwgrond", "bouwlocatie", "bouwlocaties",
     "grondprijs", "grondprijzen",
@@ -98,7 +108,6 @@ WOON_KEYWORDS = [
     "erfpacht", "erfpachtcanon", "canon",
     "grondbedrijf",
 
-    # Beleggers / speculatie / tweede woningen
     "beleggers", "vastgoedbeleggers", "institutionele beleggers",
     "speculanten", "speculatie op de woningmarkt",
     "particuliere verhuur", "particuliere verhuurders",
@@ -107,7 +116,6 @@ WOON_KEYWORDS = [
     "verhuurhypotheek",
     "uitponden",
 
-    # Bouw / ontwikkeltraject / regels / nieuwe woonvormen
     "nieuwbouw", "woningbouw", "woningbouwplannen", "woningbouwproject",
     "bouwproductie", "bouwplannen", "bouwkosten",
     "ontwikkeltraject", "projectontwikkelaar", "projectontwikkelaars",
@@ -123,7 +131,6 @@ WOON_KEYWORDS = [
     "alternatieve woonvormen", "nieuwe woonvormen",
     "eigendomsstructuren",
 
-    # Corporaties / belastingen / financiële spagaat
     "woningcorporatie", "woningcorporaties", "corporatie", "corporaties",
     "corporatiesector",
     "woningwet", "verhuurderheffing",
@@ -135,7 +142,6 @@ WOON_KEYWORDS = [
     "huurverlaging", "inkomensafhankelijke huurverlaging",
     "schuld corporaties", "leningen corporaties",
 
-    # Regie / politiek / oplossingen
     "wooncrisis",
     "minister voor volkshuisvesting",
     "ministerie van volkshuisvesting en ruimtelijke ordening",
@@ -152,28 +158,18 @@ WOON_KEYWORDS = [
     "huis weer om in te wonen",
 ]
 
-# --------------------------------------------------
-# Minder agressieve stopwoorden: vooral sport
-# --------------------------------------------------
-
 STOP_WORDS = [
     "eredivisie", "keuken kampioen divisie",
     "champions league", "europa league",
     "wk voetbal", "ek voetbal",
     "grand prix", "formule 1", "tour de france",
-
     "ajax", "psv", "feyenoord", "az alkmaar",
     "fc utrecht", "fc twente", "fc groningen",
     "sc heerenveen", "nec nijmegen", "nac breda",
     "vvv-venlo", "heracles", "sparta rotterdam",
 ]
 
-# --------------------------------------------------
-# Prioriteit op basis van subset van de keywords
-# --------------------------------------------------
-
 HIGH_PRIORITY_KEYWORDS = [
-    # Kern van de wooncrisis
     "dakloosheid", "dakloos", "thuisloosheid",
     "volkshuisvesting", "woningnood", "wooncrisis", "woningtekort",
     "sociale huur", "sociale huurwoningen",
@@ -199,21 +195,22 @@ MEDIUM_PRIORITY_KEYWORDS = [
     "ouderenwoning", "seniorenwoning",
 ]
 
+# --------------------------------------------------
+# Prioriteit / relevantie
+# --------------------------------------------------
 
-def get_priority(item: dict) -> str:
-    """
-    Bepaal prioriteit voor het dashboard:
-    - 'skip'  : duidelijk sport / irrelevant
-    - 'high'  : kern wooncrisis/dakloosheid/grond/hypotheek/corporaties
-    - 'medium': woon-achtig, maar iets minder kern
-    - 'low'   : raakt wonen wel, maar alleen via bredere woorden
-    """
-    text = " ".join([
+def combined_text(item: dict) -> str:
+    return " ".join([
         item.get("title", ""),
         item.get("summary", ""),
         item.get("description", ""),
         item.get("source", ""),
+        item.get("search_term", ""),
     ]).lower()
+
+
+def get_priority(item: dict) -> str:
+    text = combined_text(item)
 
     if any(stop in text for stop in STOP_WORDS):
         return "skip"
@@ -231,38 +228,28 @@ def get_priority(item: dict) -> str:
 
 
 def is_relevant(item: dict) -> bool:
-    """
-    Simpele ja/nee-filter:
-    - weg als 'skip'
-    - houden als er überhaupt een woon-achtig keyword in zit
-    """
     prio = get_priority(item)
     if prio == "skip":
         return False
-
-    text = " ".join([
-        item.get("title", ""),
-        item.get("summary", ""),
-        item.get("description", ""),
-        item.get("source", ""),
-    ]).lower()
-
+    text = combined_text(item)
     return any(kw in text for kw in WOON_KEYWORDS)
 
-
 # --------------------------------------------------
-# Fetch-functies
+# Fetch helpers
 # --------------------------------------------------
 
 def fetch_rss(name, url):
     items = []
     try:
         resp = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+        resp.raise_for_status()
         feed = feedparser.parse(resp.content)
-        for entry in feed.entries[:15]:
+
+        for entry in feed.entries[:20]:
             items.append({
                 "source": name,
                 "title": entry.get("title", "").strip(),
+                "summary": entry.get("summary", "").strip(),
                 "link": entry.get("link", ""),
                 "published": entry.get("published", entry.get("updated", "")),
                 "type": "rss",
@@ -275,12 +262,12 @@ def fetch_rss(name, url):
 def try_discover_rss(base_url):
     try:
         resp = requests.get(base_url, headers=HEADERS, timeout=TIMEOUT)
+        resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
         link = soup.find("link", {"type": "application/rss+xml"})
         if link and link.get("href"):
             href = link["href"]
             if href.startswith("/"):
-                from urllib.parse import urljoin
                 href = urljoin(base_url, href)
             return href
     except Exception as e:
@@ -297,30 +284,35 @@ def fetch_scrape_fallback(name, base_url):
     items = []
     try:
         resp = requests.get(base_url, headers=HEADERS, timeout=TIMEOUT)
+        resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
         links = soup.find_all("a", href=True)
         seen = set()
-        count = 0
+
         for a in links:
             title = a.get_text(strip=True)
             href = a["href"]
+
             if not title or len(title) < 25:
                 continue
+
             if href.startswith("/"):
-                from urllib.parse import urljoin
                 href = urljoin(base_url, href)
+
             if href in seen or not href.startswith("http"):
                 continue
+
             seen.add(href)
             items.append({
                 "source": name,
                 "title": title,
+                "summary": "",
                 "link": href,
                 "published": "",
                 "type": "scrape",
             })
-            count += 1
-            if count >= 15:
+
+            if len(items) >= 15:
                 break
     except Exception as e:
         print(f"[WARN] scrape failed for {name}: {e}")
@@ -345,26 +337,157 @@ def fetch_rechtspraak_term(term):
     return items
 
 
+def fetch_json(url):
+    resp = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+    resp.raise_for_status()
+    return resp.json()
+
+# --------------------------------------------------
+# Tweede Kamer Open Data
+# --------------------------------------------------
+
+def _escape_odata_string(value: str) -> str:
+    return value.replace("'", "''")
+
+
+def tweede_kamer_urls_for_term(term: str):
+    safe = _escape_odata_string(term)
+
+    filters = [
+        f"contains(Titel,'{safe}')",
+        f"contains(Onderwerp,'{safe}')",
+        f"contains(VolledigeTitel,'{safe}')",
+    ]
+
+    queries = [
+        {
+            "label": f"Tweede Kamer: Documenten - {term}",
+            "url": (
+                f"{TWEEDE_KAMER_BASE}/Document?"
+                f"$top=20&$orderby=DatumRegistratie desc&"
+                f"$filter={' or '.join(filters)}"
+            ),
+            "kind": "Document",
+        },
+        {
+            "label": f"Tweede Kamer: Activiteiten - {term}",
+            "url": (
+                f"{TWEEDE_KAMER_BASE}/Activiteit?"
+                f"$top=20&$orderby=Aanvangstijd desc&"
+                f"$filter=contains(Onderwerp,'{safe}')"
+            ),
+            "kind": "Activiteit",
+        },
+    ]
+    return queries
+
+
+def normalize_tweede_kamer_document(row, term):
+    doc_id = row.get("Id") or row.get("id") or ""
+    title = (
+        row.get("Titel")
+        or row.get("VolledigeTitel")
+        or row.get("Onderwerp")
+        or f"Document over {term}"
+    )
+    published = (
+        row.get("DatumRegistratie")
+        or row.get("Datum")
+        or row.get("GewijzigdOp")
+        or ""
+    )
+    link = f"https://opendata.tweedekamer.nl/documentatie/odata-api"
+
+    if doc_id:
+        link = f"https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Document({doc_id})"
+
+    return {
+        "source": "Tweede Kamer",
+        "title": str(title).strip(),
+        "summary": str(row.get("Onderwerp", "") or row.get("VolledigeTitel", "")).strip(),
+        "description": str(row.get("Soort", "")).strip(),
+        "link": link,
+        "published": str(published),
+        "type": "tweedekamer",
+        "search_term": term,
+    }
+
+
+def normalize_tweede_kamer_activiteit(row, term):
+    act_id = row.get("Id") or row.get("id") or ""
+    onderwerp = row.get("Onderwerp") or f"Activiteit over {term}"
+    published = row.get("Aanvangstijd") or row.get("Datum") or row.get("GewijzigdOp") or ""
+    link = TWEEDE_KAMER_DOCS
+    if act_id:
+        link = f"https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/Activiteit({act_id})"
+
+    return {
+        "source": "Tweede Kamer",
+        "title": str(onderwerp).strip(),
+        "summary": str(row.get("Soort", "")).strip(),
+        "description": "Kameractiviteit",
+        "link": link,
+        "published": str(published),
+        "type": "tweedekamer",
+        "search_term": term,
+    }
+
+
+def fetch_tweede_kamer_term(term):
+    items = []
+
+    for query in tweede_kamer_urls_for_term(term):
+        try:
+            data = fetch_json(query["url"])
+            rows = data.get("value", [])
+
+            for row in rows:
+                if query["kind"] == "Document":
+                    item = normalize_tweede_kamer_document(row, term)
+                else:
+                    item = normalize_tweede_kamer_activiteit(row, term)
+
+                items.append(item)
+
+            time.sleep(0.2)
+        except Exception as e:
+            print(f"[WARN] Tweede Kamer failed for {term} ({query['kind']}): {e}")
+
+    return items
+
+# --------------------------------------------------
+# Dedupe
+# --------------------------------------------------
+
 def dedupe(items):
     seen = set()
     result = []
+
     for it in items:
-        key = hashlib.sha1(it["title"].strip().lower().encode("utf-8")).hexdigest()
+        raw = "||".join([
+            it.get("title", "").strip().lower(),
+            it.get("link", "").strip().lower(),
+        ])
+        key = hashlib.sha1(raw.encode("utf-8")).hexdigest()
+
         if key in seen:
             continue
+
         seen.add(key)
         result.append(it)
+
     return result
 
-
 # --------------------------------------------------
-# HTML-generatie
+# HTML
 # --------------------------------------------------
 
 def generate_html(items, generated_at):
     by_source = {}
     for it in items:
         by_source.setdefault(it["source"], []).append(it)
+
+    ordered_sources = sorted(by_source.keys())
 
     html = [
         "<!DOCTYPE html><html lang='nl'><head><meta charset='UTF-8'>",
@@ -376,6 +499,7 @@ def generate_html(items, generated_at):
         "ul{list-style:none;padding:0;} li{padding:10px 0;border-bottom:1px solid #eee;}",
         "a{color:#0645ad;text-decoration:none;} a:hover{text-decoration:underline;}",
         ".meta{color:#777;font-size:0.9rem;} .ts{color:#999;font-size:0.8rem;margin-left:8px;}",
+        ".term{color:#666;font-size:0.8rem;margin-left:8px;}",
         ".toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 24px 0;}",
         ".filter-btn{border:1px solid #d1d5db;background:#fff;color:#111;padding:8px 12px;border-radius:999px;cursor:pointer;font-size:0.9rem;}",
         ".filter-btn.active{background:#111;color:#fff;border-color:#111;}",
@@ -398,21 +522,26 @@ def generate_html(items, generated_at):
         "<p class='count' id='visible-count'></p>",
     ]
 
-    for source, entries in by_source.items():
+    for source in ordered_sources:
+        entries = by_source[source]
         html.append(f"<section class='source-block' data-source='{source}'><h2>{source}</h2><ul>")
+
         for e in entries:
             pub = f"<span class='ts'>{e['published']}</span>" if e.get("published") else ""
+            term = f"<span class='term'>({e.get('search_term','')})</span>" if e.get("search_term") else ""
             prio = e.get("priority", "low")
             prio_class = f"prio prio-{prio}"
             prio_label = {"high": "PRIO", "medium": "MID", "low": "LAAG"}.get(prio, "LAAG")
 
             html.append(
                 f"<li class='item' data-priority='{prio}'>"
-                f"<a href='{e['link']}' target='_blank'>{e['title']}</a>"
+                f"<a href='{e['link']}' target='_blank' rel='noopener noreferrer'>{e['title']}</a>"
                 f"<span class='{prio_class}'>{prio_label}</span>"
+                f"{term}"
                 f"{pub}"
                 f"</li>"
             )
+
         html.append("</ul></section>")
 
     html.append("""
@@ -477,52 +606,52 @@ def generate_html(items, generated_at):
 
     html.append("</body></html>")
 
+    os.makedirs("output", exist_ok=True)
     with open("output/index.html", "w", encoding="utf-8") as f:
         f.write("\n".join(html))
 
 # --------------------------------------------------
-# main()
+# main
 # --------------------------------------------------
 
 def main():
     all_items = []
 
-    # vaste RSS-bronnen
     for name, url in SITE_FEEDS.items():
         print(f"Fetching site feed: {name}")
         all_items.extend(fetch_rss(name, url))
         time.sleep(0.3)
 
-    # sites zonder bekende RSS (fallback: auto-detect + scrape)
     for name, url in SCRAPE_SITES.items():
         print(f"Fetching scrape/fallback: {name}")
         all_items.extend(fetch_scrape_fallback(name, url))
         time.sleep(0.3)
 
-    # Google News zoektermen
     for term in SEARCH_TERMS:
         print(f"Fetching search term: {term}")
         all_items.extend(fetch_search_term(term))
         time.sleep(0.3)
 
-    # Rechtspraak.nl (vastgoed / huur / corporaties / sociale huur)
     for term in RECHTSPRAAK_TERMS:
         print(f"Fetching rechtspraak.nl term: {term}")
         all_items.extend(fetch_rechtspraak_term(term))
         time.sleep(0.3)
 
-    # dedupliceren op titel
+    for term in TWEEDE_KAMER_TERMS:
+        print(f"Fetching Tweede Kamer term: {term}")
+        all_items.extend(fetch_tweede_kamer_term(term))
+        time.sleep(0.3)
+
     all_items = dedupe(all_items)
 
-    # prioriteit toevoegen en irrelevante items skippen
     enriched = []
     for it in all_items:
         prio = get_priority(it)
         if prio == "skip":
             continue
-        it = dict(it)
-        it["priority"] = prio
-        enriched.append(it)
+        item = dict(it)
+        item["priority"] = prio
+        enriched.append(item)
 
     print(f"Filtered down from {len(all_items)} to {len(enriched)} relevant items.")
     all_items = enriched
