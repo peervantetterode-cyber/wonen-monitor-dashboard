@@ -118,6 +118,22 @@ def is_relevant(title, summary, source_category):
     if source_category == "policy":
         return has_housing or has_homeless or has_realestate or has_policy
 
+    return (
+        has_housing
+        or has_homeless
+        or has_realestate
+        or ("woon" in text.lower())
+        or ("woning" in text.lower())
+        or ("huur" in text.lower())
+        or ("huis" in text.lower())
+        or ("bouw" in text.lower())
+        or ("dakloos" in text.lower())
+        or ("vastgoed" in text.lower())
+    )
+
+    if source_category == "policy":
+        return has_housing or has_homeless or has_realestate or has_policy
+
     return has_housing or has_homeless or has_realestate
 
 def parse_feed(feed_conf):
