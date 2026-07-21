@@ -1,64 +1,76 @@
 from pathlib import Path
 import json
+import datetime as dt
 
-items = [
+import feedparser  # moet in requirements.txt staan
+import requests
+
+
+FEEDS = [
     {
-        "source_id": "demo-ftm",
-        "source_name": "Demo bron",
+        "source_id": "nos",
+        "source_name": "NOS",
         "source_category": "media",
-        "source_priority": "high",
-        "title": "Voorbeeldstuk over woningmarkt en macht",
-        "url": "https://example.com/artikel-1",
-        "summary": "Dit is een voorbeelditem zodat je dashboard meteen iets laat zien zodra je het online zet.",
-        "published_at": "2026-07-21T09:00:00",
-        "raw_text": "voorbeeldtekst",
-        "matched_profiles": ["woningmarkt"],
-        "matched_angles": ["geld_en_macht"],
-        "score": 18,
-        "labels": ["priority"],
-        "entity_type": None,
-        "political_context": None
+        "url": "https://feeds.nos.nl/nosnieuwsbinnenland"
     },
     {
-        "source_id": "demo-tk",
-        "source_name": "Tweede Kamer",
-        "source_category": "politics",
-        "source_priority": "high",
-        "title": "Commissiedebat over volkshuisvesting",
-        "url": "https://example.com/kamerstuk-1",
-        "summary": "Voorbeelditem voor het blok Tweede Kamer en beleid.",
-        "published_at": "2026-07-21T08:30:00",
-        "raw_text": "voorbeeldtekst tk",
-        "matched_profiles": ["woningmarkt"],
-        "matched_angles": ["beleid"],
-        "score": 14,
-        "labels": ["watchlist"],
-        "entity_type": "Activiteit",
-        "political_context": "Tweede Kamer activiteiten over wonen"
+        "source_id": "rijksoverheid",
+        "source_name": "Rijksoverheid",
+        "source_category": "policy",
+        "url": "https://feeds.rijksoverheid.nl/nieuws.rss"
     },
-    {
-        "source_id": "demo-vastgoed",
-        "source_name": "Vastgoednieuws",
-        "source_category": "media",
-        "source_priority": "medium",
-        "title": "Belegger koopt woningportefeuille in Randstad",
-        "url": "https://example.com/vastgoed-1",
-        "summary": "Voorbeelditem voor het blok vastgoedmarkt en deals.",
-        "published_at": "2026-07-21T07:45:00",
-        "raw_text": "voorbeeldtekst vastgoed",
-        "matched_profiles": ["vastgoedmarkt_en_transacties"],
-        "matched_angles": ["transacties"],
-        "score": 11,
-        "labels": ["watchlist"],
-        "entity_type": None,
-        "political_context": None
-    }
 ]
 
-Path("data").mkdir(exist_ok=True)
-Path("data/latest.json").write_text(
-    json.dumps(items, ensure_ascii=False, indent=2),
-    encoding="utf-8"
-)
+def fetch_feed(feed_conf):
+    d = feedparser.parse(feed_conf["url"])
+    items = []
+    for entry in d.entries[:20]:  # max 20 per bron om het klein te houden
+        title = getattr(entry, "title", "")
+        link = getattr(entry, "link", "")
+        summary = getattr(entry, "summary", "") or getattr(entry, "description", "")
+        published = getattr(entry, "published", "") or getattr(entry, "updated", "")
 
-print("data/latest.json bijgewerkt")
+        item = {
+            "source_id": feed_conf["source_id"],
+            "source_name": feed_conf["source_name"],
+            "source_category": feed_conf["source_category"],
+            "source_priority": "medium",
+            "title": title,
+            "url": link,
+            "summary": summary,
+            "published_at": published,
+            "raw_text": summary,
+            # heel simpele tagging – dit kun je later slimmer maken
+            "matched_profiles": ["woningmarkt"] if "woning" in title.lower() or "huur" in title.lower() else [],
+            "matched_angles": [],
+            "score": 10,
+            "labels": [],
+            "entity_type": None,
+            "political_context": None,
+        }
+        items.append(item)
+    return items
+
+
+def main():
+    all_items = []
+    for f in FEEDS:
+        try:
+            all_items.extend(fetch_feed(f))
+        except Exception as e:
+            print("Fout bij feed", f["source_id"], e)
+
+    # heel simpele sortering: nieuwste eerst op published_at als string
+    all_items.sort(key=lambda x: x.get("published_at", ""), reverse=True)
+
+    Path("data").mkdir(exist_ok=True)
+    out_path = Path("data/latest.json")
+    out_path.write_text(
+        json.dumps(all_items, ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+    print(f"{len(all_items)} items naar {out_path} geschreven")
+
+
+if __name__ == "__main__":
+    main()
