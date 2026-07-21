@@ -368,39 +368,117 @@ def generate_html(items, generated_at):
 
     html = [
         "<!DOCTYPE html><html lang='nl'><head><meta charset='UTF-8'>",
+        "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
         "<title>Woonmonitor Dashboard</title>",
         "<style>",
-        "body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:24px;background:#fafafa;color:#1a1a1a;}",
-        "h1{font-size:1.6rem;} h2{font-size:1.1rem;border-bottom:2px solid #ddd;padding-bottom:6px;margin-top:32px;}",
-        "ul{list-style:none;padding:0;} li{padding:8px 0;border-bottom:1px solid #eee;}",
+        "body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:1100px;margin:0 auto;padding:24px;background:#fafafa;color:#1a1a1a;}",
+        "h1{font-size:1.8rem;margin-bottom:8px;} h2{font-size:1.1rem;border-bottom:2px solid #ddd;padding-bottom:6px;margin-top:32px;}",
+        "ul{list-style:none;padding:0;} li{padding:10px 0;border-bottom:1px solid #eee;}",
         "a{color:#0645ad;text-decoration:none;} a:hover{text-decoration:underline;}",
-        ".meta{color:#777;font-size:0.85rem;} .ts{color:#999;font-size:0.8rem;}",
-        ".prio{font-size:0.75rem;border-radius:4px;padding:2px 6px;margin-left:6px;}",
+        ".meta{color:#777;font-size:0.9rem;} .ts{color:#999;font-size:0.8rem;margin-left:8px;}",
+        ".toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 24px 0;}",
+        ".filter-btn{border:1px solid #d1d5db;background:#fff;color:#111;padding:8px 12px;border-radius:999px;cursor:pointer;font-size:0.9rem;}",
+        ".filter-btn.active{background:#111;color:#fff;border-color:#111;}",
+        ".prio{display:inline-block;font-size:0.75rem;border-radius:999px;padding:2px 8px;margin-left:8px;font-weight:600;vertical-align:middle;}",
         ".prio-high{background:#b91c1c;color:#fff;}",
-        ".prio-medium{background:#f97316;color:#111;}",
+        ".prio-medium{background:#f59e0b;color:#111;}",
         ".prio-low{background:#e5e7eb;color:#111;}",
+        ".item{display:block;}",
+        ".item.hidden{display:none;}",
+        ".source-block.hidden{display:none;}",
+        ".count{font-size:0.9rem;color:#666;margin-bottom:12px;}",
         "</style></head><body>",
         f"<h1>Woonmonitor Dashboard</h1><p class='meta'>Laatst bijgewerkt: {generated_at}</p>",
+        "<div class='toolbar' id='filters'>",
+        "<button class='filter-btn active' data-filter='all'>Alles</button>",
+        "<button class='filter-btn' data-filter='high'>Alleen prio</button>",
+        "<button class='filter-btn' data-filter='high-medium'>Prio + middel</button>",
+        "<button class='filter-btn' data-filter='low'>Alleen laag</button>",
+        "</div>",
+        "<p class='count' id='visible-count'></p>",
     ]
 
     for source, entries in by_source.items():
-        html.append(f"<h2>{source}</h2><ul>")
+        html.append(f"<section class='source-block' data-source='{source}'><h2>{source}</h2><ul>")
         for e in entries:
             pub = f"<span class='ts'>{e['published']}</span>" if e.get("published") else ""
             prio = e.get("priority", "low")
             prio_class = f"prio prio-{prio}"
-            prio_label = {"high": "PRIO", "medium": "M", "low": "L"}.get(prio, "L")
+            prio_label = {"high": "PRIO", "medium": "MID", "low": "LAAG"}.get(prio, "LAAG")
+
             html.append(
-                f"<li><a href='{e['link']}' target='_blank'>{e['title']}</a> "
-                f"<span class='{prio_class}'>{prio_label}</span> {pub}</li>"
+                f"<li class='item' data-priority='{prio}'>"
+                f"<a href='{e['link']}' target='_blank'>{e['title']}</a>"
+                f"<span class='{prio_class}'>{prio_label}</span>"
+                f"{pub}"
+                f"</li>"
             )
-        html.append("</ul>")
+        html.append("</ul></section>")
+
+    html.append("""
+<script>
+(function () {
+  const buttons = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.item');
+  const blocks = document.querySelectorAll('.source-block');
+  const countEl = document.getElementById('visible-count');
+
+  function matchesFilter(priority, filter) {
+    if (filter === 'all') return true;
+    if (filter === 'high') return priority === 'high';
+    if (filter === 'high-medium') return priority === 'high' || priority === 'medium';
+    if (filter === 'low') return priority === 'low';
+    return true;
+  }
+
+  function updateCount() {
+    const visibleItems = [...document.querySelectorAll('.item')].filter(
+      el => !el.classList.contains('hidden')
+    ).length;
+    countEl.textContent = `Zichtbare artikelen: ${visibleItems}`;
+  }
+
+  function applyFilter(filter) {
+    items.forEach(item => {
+      const priority = item.dataset.priority;
+      if (matchesFilter(priority, filter)) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    blocks.forEach(block => {
+      const visibleInBlock = block.querySelectorAll('.item:not(.hidden)').length;
+      if (visibleInBlock === 0) {
+        block.classList.add('hidden');
+      } else {
+        block.classList.remove('hidden');
+      }
+    });
+
+    buttons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.filter === filter);
+    });
+
+    updateCount();
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function () {
+      applyFilter(this.dataset.filter);
+    });
+  });
+
+  applyFilter('all');
+})();
+</script>
+""")
 
     html.append("</body></html>")
 
     with open("output/index.html", "w", encoding="utf-8") as f:
         f.write("\n".join(html))
-
 
 # --------------------------------------------------
 # main()
