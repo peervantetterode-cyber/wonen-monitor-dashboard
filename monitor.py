@@ -1,0 +1,64 @@
+from pathlib import Path
+import json
+
+items = [
+    {
+        "source_id": "demo-ftm",
+        "source_name": "Demo bron",
+        "source_category": "media",
+        "source_priority": "high",
+        "title": "Voorbeeldstuk over woningmarkt en macht",
+        "url": "https://example.com/artikel-1",
+        "summary": "Dit is een voorbeelditem zodat je dashboard meteen iets laat zien zodra je het online zet.",
+        "published_at": "2026-07-21T09:00:00",
+        "raw_text": "voorbeeldtekst",
+        "matched_profiles": ["woningmarkt"],
+        "matched_angles": ["geld_en_macht"],
+        "score": 18,
+        "labels": ["priority"],
+        "entity_type": None,
+        "political_context": None
+    },
+    {
+        "source_id": "demo-tk",
+        "source_name": "Tweede Kamer",
+        "source_category": "politics",
+        "source_priority": "high",
+        "title": "Commissiedebat over volkshuisvesting",
+        "url": "https://example.com/kamerstuk-1",
+        "summary": "Voorbeelditem voor het blok Tweede Kamer en beleid.",
+        "published_at": "2026-07-21T08:30:00",
+        "raw_text": "voorbeeldtekst tk",
+        "matched_profiles": ["woningmarkt"],
+        "matched_angles": ["beleid"],
+        "score": 14,
+        "labels": ["watchlist"],
+        "entity_type": "Activiteit",
+        "political_context": "Tweede Kamer activiteiten over wonen"
+    },
+    {
+        "source_id": "demo-vastgoed",
+        "source_name": "Vastgoednieuws",
+        "source_category": "media",
+        "source_priority": "medium",
+        "title": "Belegger koopt woningportefeuille in Randstad",
+        "url": "https://example.com/vastgoed-1",
+        "summary": "Voorbeelditem voor het blok vastgoedmarkt en deals.",
+        "published_at": "2026-07-21T07:45:00",
+        "raw_text": "voorbeeldtekst vastgoed",
+        "matched_profiles": ["vastgoedmarkt_en_transacties"],
+        "matched_angles": ["transacties"],
+        "score": 11,
+        "labels": ["watchlist"],
+        "entity_type": None,
+        "political_context": None
+    }
+]
+
+Path("data").mkdir(exist_ok=True)
+Path("data/latest.json").write_text(
+    json.dumps(items, ensure_ascii=False, indent=2),
+    encoding="utf-8"
+)
+
+print("data/latest.json bijgewerkt")
