@@ -21,13 +21,13 @@ RSS_FEEDS = [
         "source_id": "rijksoverheid_volkshuisvesting",
         "source_name": "Rijksoverheid Volkshuisvesting",
         "source_category": "policy",
-        "url": "https://www.rijksoverheid.nl/onderwerpen/volkshuisvesting/nieuws"
+        "url": "https://feeds.rijksoverheid.nl/onderwerpen/volkshuisvesting/nieuws.rss"
     },
     {
         "source_id": "min_vro_nieuws",
         "source_name": "Ministerie VRO",
         "source_category": "policy",
-        "url": "https://www.rijksoverheid.nl/ministeries/ministerie-van-volkshuisvesting-en-ruimtelijke-ordening/nieuws"
+        "url": "https://feeds.rijksoverheid.nl/ministeries/ministerie-van-volkshuisvesting-en-ruimtelijke-ordening/nieuws.rss"
     }
 ]
 
