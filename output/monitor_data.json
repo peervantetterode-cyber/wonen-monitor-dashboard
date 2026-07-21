@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T13:05:55.982994+00:00",
+  "generated_at": "2026-07-21T13:31:45.110569+00:00",
   "items": [
     {
       "source": "FD",
@@ -108,16 +108,9 @@
     },
     {
       "source": "Volkskrant",
-      "title": "Impopulaire legerleider in Oekraïne lijkt nu ook op weg naar de uitgang",
-      "link": "https://www.volkskrant.nl/buitenland/impopulaire-legerleider-in-oekraine-lijkt-nu-ook-op-weg-naar-de-uitgang~b5d451c4/",
-      "published": "Tue, 21 Jul 2026 08:38:52 GMT",
-      "type": "rss"
-    },
-    {
-      "source": "Volkskrant",
-      "title": "Russisch oorlogsschip voert schietoefening uit op 40 kilometer afstand van Britse kust",
-      "link": "https://www.volkskrant.nl/buitenland/russisch-oorlogsschip-voert-schietoefening-uit-op-40-kilometer-afstand-van-britse-kust~b7568f5e/",
-      "published": "Tue, 21 Jul 2026 10:04:00 GMT",
+      "title": "Krijgt de economie nóg een opdoffer als na de Straat van Hormuz ook die van Bab el-Mandeb wordt geblokkeerd?",
+      "link": "https://www.volkskrant.nl/economie/krijgt-de-economie-nog-een-opdoffer-als-na-de-straat-van-hormuz-ook-die-van-bab-el-mandeb-wordt-geblokkeerd~b32cc7d2/",
+      "published": "Tue, 21 Jul 2026 13:02:59 GMT",
       "type": "rss"
     },
     {
@@ -192,9 +185,16 @@
     },
     {
       "source": "Volkskrant",
-      "title": "De drugsbaas die in de VS levenslang krijgt, laat in Mexico een brute drugsoorlog achter",
-      "link": "https://www.volkskrant.nl/buitenland/de-drugsbaas-die-in-de-vs-levenslang-krijgt-laat-in-mexico-een-brute-drugsoorlog-achter~b953c649/",
-      "published": "Tue, 21 Jul 2026 03:00:00 GMT",
+      "title": "Impopulaire legerleider in Oekraïne lijkt nu ook op weg naar de uitgang",
+      "link": "https://www.volkskrant.nl/buitenland/impopulaire-legerleider-in-oekraine-lijkt-nu-ook-op-weg-naar-de-uitgang~b5d451c4/",
+      "published": "Tue, 21 Jul 2026 08:38:52 GMT",
+      "type": "rss"
+    },
+    {
+      "source": "Volkskrant",
+      "title": "Russisch oorlogsschip voert schietoefening uit op 40 kilometer afstand van Britse kust",
+      "link": "https://www.volkskrant.nl/buitenland/russisch-oorlogsschip-voert-schietoefening-uit-op-40-kilometer-afstand-van-britse-kust~b7568f5e/",
+      "published": "Tue, 21 Jul 2026 10:04:00 GMT",
       "type": "rss"
     },
     {
@@ -209,6 +209,34 @@
       "title": "Nachtelijke dopingcontroles in de Tour, mogen die zomaar?",
       "link": "https://www.volkskrant.nl/sport/nachtelijke-dopingcontroles-in-de-tour-mogen-die-zomaar~bf1312cc8/",
       "published": "Mon, 20 Jul 2026 16:04:00 GMT",
+      "type": "rss"
+    },
+    {
+      "source": "NOS Algemeen",
+      "title": "Tientallen agenten gewond bij protesten in Bologna na dood van arrestant",
+      "link": "https://nos.nl/l/2623874",
+      "published": "Tue, 21 Jul 2026 15:30:00 +0200",
+      "type": "rss"
+    },
+    {
+      "source": "NOS Algemeen",
+      "title": "Duurzaam kantoor krijgt dankzij gasgeneratoren voorrang op het stroomnet",
+      "link": "https://nos.nl/l/2623872",
+      "published": "Tue, 21 Jul 2026 15:27:22 +0200",
+      "type": "rss"
+    },
+    {
+      "source": "NOS Algemeen",
+      "title": "143 mensen dood gevonden op migrantenboot voor kust Mauritanië",
+      "link": "https://nos.nl/l/2623870",
+      "published": "Tue, 21 Jul 2026 15:19:41 +0200",
+      "type": "rss"
+    },
+    {
+      "source": "NOS Algemeen",
+      "title": "Man krijgt vijftien maanden cel voor bedreiging van Groningse slagerijen",
+      "link": "https://nos.nl/l/2623868",
+      "published": "Tue, 21 Jul 2026 15:11:51 +0200",
       "type": "rss"
     },
     {
@@ -289,28 +317,7 @@
       "type": "rss"
     },
     {
-      "source": "NOS Algemeen",
-      "title": "Tate-broers verzetten zich tegen uitlevering aan Verenigd Koninkrijk",
-      "link": "https://nos.nl/l/2623830",
-      "published": "Tue, 21 Jul 2026 08:12:02 +0200",
-      "type": "rss"
-    },
-    {
-      "source": "NOS Algemeen",
-      "title": "Voor de tiende nacht op rij aanvallen tussen Iran en VS",
-      "link": "https://nos.nl/l/2623828",
-      "published": "Tue, 21 Jul 2026 07:31:37 +0200",
-      "type": "rss"
-    },
-    {
-      "source": "NOS Algemeen",
-      "title": "Gasgeneratoren moeten stroomnet Utrecht ook op piektijden betrouwbaar houden",
-      "link": "https://nos.nl/l/2623826",
-      "published": "Tue, 21 Jul 2026 07:00:18 +0200",
-      "type": "rss"
-    },
-    {
-      "source": "NOS Algemeen",
+      "source": "NOS Binnenland",
       "title": "Wekdienst 21/7: Start Nijmeegse Vierdaagse • Libanese president in VS",
       "link": "https://nos.nl/l/2623824",
       "published": "Tue, 21 Jul 2026 06:25:55 +0200",
@@ -377,13 +384,6 @@
       "title": "50 jaar na landing Viking-missie: nog steeds kans op leven op Mars",
       "link": "https://nos.nl/l/2623730",
       "published": "Mon, 20 Jul 2026 11:30:02 +0200",
-      "type": "rss"
-    },
-    {
-      "source": "NOS Binnenland",
-      "title": "Twee jongeren omgekomen bij ongeluk in Maarssen",
-      "link": "https://nos.nl/l/2623717",
-      "published": "Mon, 20 Jul 2026 09:18:02 +0200",
       "type": "rss"
     },
     {
@@ -577,6 +577,20 @@
     },
     {
       "source": "Telegraaf",
+      "title": "Benzineprijs richting recordhoogte: 'We zijn terug bij af'",
+      "link": "https://www.telegraaf.nl/video/benzineprijs-richting-recordhoogte-we-zijn-terug-bij-af/159011387.html",
+      "published": "Tue, 21 Jul 2026 13:17:00 GMT",
+      "type": "rss"
+    },
+    {
+      "source": "Telegraaf",
+      "title": "LIVE | Code oranje in delen van Spanje om extreme hitte, ook groot risico op bosbranden",
+      "link": "https://www.telegraaf.nl/binnenland/live-code-oranje-in-delen-van-spanje-om-extreme-hitte-ook-groot-risico-op-bosbranden/158268163.html",
+      "published": "Tue, 21 Jul 2026 13:05:00 GMT",
+      "type": "rss"
+    },
+    {
+      "source": "Telegraaf",
       "title": "’Arne Slot wil maar voor twee jaar tekenen als bondscoach, maar de KNVB wil iemand voor vier jaar’",
       "link": "https://www.telegraaf.nl/sport/voetbal/arne-slot-wil-maar-voor-twee-jaar-tekenen-als-bondscoach-maar-de-knvb-wil-iemand-voor-vier-jaar/159002521.html",
       "published": "Tue, 21 Jul 2026 13:00:00 GMT",
@@ -667,17 +681,31 @@
       "type": "rss"
     },
     {
-      "source": "Telegraaf",
-      "title": "LIVE | Koeweit meldt aanvallen op energie- en ontziltingsinstallaties",
-      "link": "https://www.telegraaf.nl/buitenland/live-koeweit-meldt-aanvallen-op-energie-en-ontziltingsinstallaties/158988033.html",
-      "published": "Tue, 21 Jul 2026 12:17:00 GMT",
+      "source": "NRC",
+      "title": "‘Mighty Mouse’ Kevin Keegan was veel meer dan een topvoetballer: warm, charismatisch en sociaal voelend",
+      "link": "https://www.nrc.nl/nieuws/2026/07/21/mighty-mouse-kevin-keegan-was-veel-meer-dan-een-topvoetballer-warm-charismatisch-en-sociaal-voelend-a4932936",
+      "published": "Tue, 21 Jul 2026 15:23:23 +0200",
       "type": "rss"
     },
     {
-      "source": "Telegraaf",
-      "title": "Italië onderschept voor 250 miljoen euro aan cocaïne in haven",
-      "link": "https://www.telegraaf.nl/buitenland/italie-onderschept-voor-250-miljoen-euro-aan-cocane-in-haven/159006631.html",
-      "published": "Tue, 21 Jul 2026 12:05:09 GMT",
+      "source": "NRC",
+      "title": "Moeders die er niet meer zijn",
+      "link": "https://www.nrc.nl/nieuws/2026/07/21/moeders-die-er-niet-meer-zijn-a4932955",
+      "published": "Tue, 21 Jul 2026 15:19:53 +0200",
+      "type": "rss"
+    },
+    {
+      "source": "NRC",
+      "title": "Zaak rond vijf Brabantse kippenboeren zorgt bij agrariërs voor barst in vertrouwen stikstofaanpak kabinet. Minister roept juist op om &#8216;in gesprek te blijven&#8217;",
+      "link": "https://www.nrc.nl/nieuws/2026/07/21/zaak-rond-vijf-brabantse-kippenboeren-zorgt-bij-boeren-voor-barst-in-vertrouwen-stikstofaanpak-kabinet-minister-roept-juist-op-om-in-gesprek-te-blijven-a4932937",
+      "published": "Tue, 21 Jul 2026 15:10:59 +0200",
+      "type": "rss"
+    },
+    {
+      "source": "NRC",
+      "title": "Van Willem van Oranjes bevelhebbersstaf uit 1574 tot Amalia&#8217;s baret: in Paleis Noordeinde is te zien hoe innig de koninklijke band met het leger is",
+      "link": "https://www.nrc.nl/nieuws/2026/07/21/van-willem-van-oranjes-bevelhebbersstaf-uit-1574-tot-amalias-baret-in-paleis-noordeinde-is-te-zien-hoe-innig-de-koninklijke-band-met-het-leger-is-a4932958",
+      "published": "Tue, 21 Jul 2026 15:08:10 +0200",
       "type": "rss"
     },
     {
@@ -755,34 +783,6 @@
       "title": "Is het sprookje van Dubai door de Iran-oorlog definitief voorbij?",
       "link": "https://www.nrc.nl/nieuws/2026/07/21/is-het-sprookje-van-dubai-door-de-iran-oorlog-definitief-voorbij-a4932931",
       "published": "Tue, 21 Jul 2026 05:00:01 +0200",
-      "type": "rss"
-    },
-    {
-      "source": "NRC",
-      "title": "Aan Zet",
-      "link": "https://www.nrc.nl/puzzels/aan-zet/2026/07/21/",
-      "published": "Tue, 21 Jul 2026 02:00:09 +0200",
-      "type": "rss"
-    },
-    {
-      "source": "NRC",
-      "title": "Koprol",
-      "link": "https://www.nrc.nl/puzzels/koprol/2026/07/21/",
-      "published": "Tue, 21 Jul 2026 02:00:09 +0200",
-      "type": "rss"
-    },
-    {
-      "source": "NRC",
-      "title": "Cijferblok",
-      "link": "https://www.nrc.nl/puzzels/cijferblok/2026/07/21/",
-      "published": "Tue, 21 Jul 2026 02:00:09 +0200",
-      "type": "rss"
-    },
-    {
-      "source": "NRC",
-      "title": "Woordzoeker",
-      "link": "https://www.nrc.nl/puzzels/woordzoeker/2026/07/21/",
-      "published": "Tue, 21 Jul 2026 02:00:09 +0200",
       "type": "rss"
     },
     {
@@ -1032,6 +1032,13 @@
     },
     {
       "source": "Cobouw",
+      "title": "Dit zijn de tien grootste infraprojecten van Nederland",
+      "link": "https://www.cobouw.nl/338077/dit-zijn-de-tien-grootste-infraprojecten-van-nederland",
+      "published": "",
+      "type": "scrape"
+    },
+    {
+      "source": "Cobouw",
       "title": "Het blijft lang wachten op een bouwvergunning in Den Haag",
       "link": "https://www.cobouw.nl/338133/het-blijft-lang-wachten-op-een-bouwvergunning-in-den-haag",
       "published": "",
@@ -1041,13 +1048,6 @@
       "source": "Cobouw",
       "title": "Controversieel groengeel icoon maakt plaats voor nieuwe Zoetermeerse wijk",
       "link": "https://www.cobouw.nl/338111/controversieel-groengeel-icoon-maakt-plaats-voor-nieuwe-zoetermeerse-wijk",
-      "published": "",
-      "type": "scrape"
-    },
-    {
-      "source": "Cobouw",
-      "title": "Dit zijn de tien grootste infraprojecten van Nederland",
-      "link": "https://www.cobouw.nl/338077/dit-zijn-de-tien-grootste-infraprojecten-van-nederland",
       "published": "",
       "type": "scrape"
     },
@@ -1137,6 +1137,13 @@
     },
     {
       "source": "Vastgoednieuws",
+      "title": "woningen15:21Boeggolf aan oude corporatiewoningen maakt onderhoud duurderDe onderhoudskosten bij woningcorporaties zijn de laatste jaren explosief gestegen door onder andere een sterke stijging van het aantal oude woningen dat wordt opgeknapt.",
+      "link": "https://www.vastgoedmarkt.nl/210125/boeggolf-aan-oude-corporatiewoningen-maakt-onderhoud-duurder",
+      "published": "",
+      "type": "scrape"
+    },
+    {
+      "source": "Vastgoednieuws",
       "title": "woningengisterenBouwinvest start nieuw impactmandaat voor pensioenfonds BpfbouwVermogensbeheerder Bouwinvest investeert namens pensioenfonds Bpfbouw 150 miljoen euro via een nieuw beleggingsmandaat. Dit mandaat richt zich op het vergroten van het aanbod middenhuurwoningen en het stimuleren van duurzame bouwmethoden.",
       "link": "https://www.vastgoedmarkt.nl/210111/bouwinvest-start-nieuw-impactmandaat-voor-pensioenfonds-bpfbouw",
       "published": "",
@@ -1174,13 +1181,6 @@
       "source": "Vastgoednieuws",
       "title": "studentenwoningen17 jul. 26'Je kunt een goede verhuurder zijn én er een goede boterham mee verdienen'Na de financiële crisis in 2008 stootte Broos Schnetz een groot deel van zijn vastgoed af om zich te richten op studentenkamerverhuur. Veertien studentenhuizen in Utrecht klinkt voor sommigen als een drama, maar hij had in al die jaren niet één zaak bij de Huurcommissie of de rechter.",
       "link": "https://www.vastgoedmarkt.nl/210084/je-kunt-een-goede-verhuurder-zijn-en-er-een-goede-boterham-mee-verdienen",
-      "published": "",
-      "type": "scrape"
-    },
-    {
-      "source": "Vastgoednieuws",
-      "title": "retail16 jul. 26'De perceptie dat Leidsche Rijn Centrum kwetsbaar is, is kennelijk hardnekkig'Ruim een jaar geleden kocht het onbekende Maven Real Estate winkelcentrum Leidsche Rijn Centrum (LRC). Hoe kwam de deal tot stand, hoe staat het winkelcentrum er nu voor en welke vastgoedstrategie hanteren de assetmanagers?",
-      "link": "https://www.vastgoedmarkt.nl/210041/leidsche-rijn-centrum-is-niet-kwetsbaar",
       "published": "",
       "type": "scrape"
     },
@@ -1669,6 +1669,14 @@
     },
     {
       "source": "Zoekterm: FD AND huizen",
+      "title": "Woningmarkteconoom: ‘Waarom moeten we het kopen van huizen extra stimuleren?’ - Het Financieele Dagblad",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUTh5R3REeXVna0RjRnFjRHZUVGMtYjBpWXhyMmFjQmdwM1pYUS1CS2F4VkkzNmliY01NUkQ4d1Rnb0QyLTN3VFREa3RXQkhCMlJKZ0t1YlBfc2FUaDlCREhUOXJuRnR3Q1k2S2oyeFZZY3dacDgybmRCRTFpdDIxS2IxeEtBWG5WbmVOMm5VeGRSNUJ0bEpzNmNCSzhNdWM1V2h5S3dMcw?oc=5",
+      "published": "Fri, 09 Feb 2024 08:00:00 GMT",
+      "type": "rss",
+      "search_term": "FD AND huizen"
+    },
+    {
+      "source": "Zoekterm: FD AND huizen",
       "title": "Bieder op beursfonds B&S kampt met miljoenenclaim en beslag op woning in Dubai - Het Financieele Dagblad",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcWR6VExMZGtXVS1scnZvQjdmWXQ4SVE0OUhDU0FLbHM0N3VIMEM2eHVfQWpFNGpTZEw5SVRlMlZZRVhwUzFoVHdKNkJoMU8zSUpMZzRMSl9VNUJxX1IwdjJ0WWhYVFZxMVRkbVNYLWpZREppX1k5cmFxSUZDZXh6NDdBdTF0NUY1Sk9SSUxldDNIYnBKOWNkUG9rNjF3TWVjdDFLaWZDcUl0WFlfTWxpQmxkUGs?oc=5",
       "published": "Wed, 05 Nov 2025 08:00:00 GMT",
@@ -1680,14 +1688,6 @@
       "title": "Binnen één minuut dertig reacties: door woningtekort reageren mensen massaal op advertenties - Het Financieele Dagblad",
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOVJNSE1tSWwwa21pbDhtaUVZZXBnM3FsY0RfZU51WXdqZkx5MWFETFBDUkxQWF80UVh4S1VwcEJRUC11c2syWWxGOFJMZ1R1cmhuQVpFNk5sVnZ1eWlDbEtzRF9LN3c0b1ZYdEdtOFoyMUdJbXJ5a2NxaUlxYm1WZ3FwRk9mUTUxQnRudUtmZWdsSVc4VTlsdFl5VjRLY0xRT0JhQ3ZiQ2s1b2tzZWpDT1lqMGZ6REtzaHpoaVE2WWFIbVU?oc=5",
       "published": "Tue, 29 Jul 2025 07:00:00 GMT",
-      "type": "rss",
-      "search_term": "FD AND huizen"
-    },
-    {
-      "source": "Zoekterm: FD AND huizen",
-      "title": "Wegzakkende woningen dreigen een onoplosbaar probleem te worden - Het Financieele Dagblad",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQlRfbnh0Z21iaUFIUDEzY0RyZWdjSHhXUWJ1VWg2Q2JaQ29ISXhfYnVOQy1PODFaQnlCMkx5SGgwdkNkRms4VFVyYk5qYUdsU2Fhb3JGTWplQXQ3dVhtaW1saWI5NU1XWVJVb1pDYzBRV2dmTVNhSFA0Sm84UmZhZ2V4VzA4NnM1dkxkSDE2MHc3OFc4dmI0cTVDYmNEQQ?oc=5",
-      "published": "Thu, 15 Feb 2024 08:00:00 GMT",
       "type": "rss",
       "search_term": "FD AND huizen"
     },
@@ -1789,9 +1789,9 @@
     },
     {
       "source": "Zoekterm: FD AND huizenmarkt",
-      "title": "Huiseigenaren kunnen ook met behoud renteaftrek zwaarder worden belast - Het Financieele Dagblad",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbU1xTzNrN3NkcWZJZDN6TjloeVFxSXlEYWc3NjJQdDg4NG5nemtaSkpsM09LX3lHT3pQTU51X3IwRkdqa25mRDIzV2pxOFdFLXNlaFA0TEhZYzlmSEVBMHlHUkxvLUp2V19uOHU2RXJzVkplQjRZVEFsUE1hNHZld3E1dmp3UEd6eF9oUUV4eHBETzVvNU1NaGdNNThGNG8zRFBj?oc=5",
-      "published": "Sun, 14 Sep 2025 07:00:00 GMT",
+      "title": "Woningbouwdoelen op grote locaties raken uit zicht - Het Financieele Dagblad",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMDk3dzBsd3RGWEZlSzVsS0hLdXBjcVBTT2diRk5ZTDRpaDAtdHBHMm1zUk1pandvMlBYSnlfZmM1ZG5zdFdfYWEzdW9XNnFidi1CMzhYNE40NVRpVDNFMGtteFlENVFteG1XR2YwQUJZTk9DMzBGb2pXMXdzX2VPNEVDR3dMVnVf?oc=5",
+      "published": "Fri, 05 Sep 2025 07:00:00 GMT",
       "type": "rss",
       "search_term": "FD AND huizenmarkt"
     },
@@ -1869,14 +1869,6 @@
     },
     {
       "source": "Zoekterm: hypotheek",
-      "title": "Vestiging tweede hypotheek is aanleiding voor aansprakelijkheid voor belastingschuld - Hendriksen Accountants en Adviseurs",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQ0ktOE9faE1kbHFLRndYdmU5d1QzNEZpMnh1eTI3YkotcUlET0hhOE9uWFY2cmVzMDJoRkcxZXZYcTdRZHlFeE1uS2hFVkpvaTZNUUVWaUxtMHZIX2NMM3FGUlFvT1ppc1Y3RnVXZmMyTHdZdE4tM1d3cXhFRlhyc3hvR0hLT2RVRzdRc0h3aXBYbW02WVZwdFQwSENCTkJtQk8tSC1WTEFadWR0MFBuT0xLeUo?oc=5",
-      "published": "Thu, 16 Jul 2026 23:36:36 GMT",
-      "type": "rss",
-      "search_term": "hypotheek"
-    },
-    {
-      "source": "Zoekterm: hypotheek",
       "title": "‘We sloten de hypotheek bewust alleen op zijn inkomen af. Dat maakte ons minder kwetsbaar voor ziekte of ontslag’ - Trouw",
       "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNUE5ldTQzQmlRcTFFekg3NWl4SW5tRVlYOUREelpiWm9kV3A1TmlwbkN1T2d0Ul8zODRrTktxVjBRLU81R0lOdTJ2NXBmaFBpNFhreUdDWU96SkE5U19RTWFfNXIwdzIwNGo2MGJoWmNyUEMwTkstM2tGUEdHR1o0WDRWb0txQ3hHemFhdjcxbTRScVQtenVNWXcwTko1ZEFlXzlfNkZ3cy10UWZMeWwzZzdtTzJ5WlFsel9NbXpFdmxBd1JhM1RlZm5hUWU3TGVHRnNGbnBEZXplS0hOemdOU2NLZDdZXzdRUGJhYy1rSkM1NFN1aFE?oc=5",
       "published": "Thu, 16 Jul 2026 12:30:00 GMT",
@@ -1917,14 +1909,6 @@
     },
     {
       "source": "Zoekterm: hypotheek",
-      "title": "Waarom de WOZ-waarde weinig zegt over wat je woning nu waard is - Independer Weblog",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVHZ1NHNDTVV6S2ROR1pBVTNhdWVld1E5SUZmVTdhUTBTbGh0NnFsWjNLVjExUXhBbTZUYjJPU2ZrNlRYMmxqVmZHcjdmT2RqaFJ5TEQtMHJhZkNOZ3dBTDU2Z2dhTnpETENBNzZnUGpuaHdWLWtrcUxZVE9XTi1PZzUzWnptMVZfWmNLb3pCeWJ2anFrTW9vVUtIQzRHQWdtVk9NT1YxUQ?oc=5",
-      "published": "Thu, 02 Jul 2026 14:42:41 GMT",
-      "type": "rss",
-      "search_term": "hypotheek"
-    },
-    {
-      "source": "Zoekterm: hypotheek",
       "title": "Steeds meer jongeren kunnen huis kopen met starterslening - Reformatorisch Dagblad",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTFNmbmE5MFlmaWp5SUJuQU9fZFNPQUQ4SGZueTBwVnN1YU9KbmE0anY2NTBOMlVDelJEMzJJRHN1S082Z1p5a3dLal9vUlZmMTBISy05NjQ3aWVkNThpUWZsZW9kTmlnQ3JGNVQ2VGtNS1l6alFHQkdEYnJnYUpBVHZUT0JqYTlTVThia0F0a3FFbC1PNlE?oc=5",
       "published": "Tue, 21 Jul 2026 07:53:26 GMT",
@@ -1949,9 +1933,25 @@
     },
     {
       "source": "Zoekterm: hypotheek",
+      "title": "Verhuizen met een aflossingsvrije hypotheek? Dat wordt steeds lastiger - EWmagazine.nl",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNYXNjWjItMHB6SFZxYjNudjFWQlRTZGtDeFpQcDdfTm8ydFBuNXlRYnkzNnR2eEZtV3pRSkRlbGdxUzhuYkdiaE9fSWx1WV9QUnJvUk5FODBwUm5vdFV4VzJYX0JCWUZ2bnNoX0Y0UVVzR1B0bmZvMFZfRUNVRTNYTjlOSkxwcmJuVjQ5QnJhblhTMWVvVzNoNnRfeW11NXNjSmpNbmF5dm9Ma3V6VDk0UnVHV19wLXBYWTJYNQ?oc=5",
+      "published": "Tue, 23 Jun 2026 07:00:00 GMT",
+      "type": "rss",
+      "search_term": "hypotheek"
+    },
+    {
+      "source": "Zoekterm: hypotheek",
       "title": "Belang hypotheek weegt zwaarder dan BKR-registratie - infinance.nl",
       "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPU2VPR0ZxVWZUSXVnekNKOFVJNWxBN0oxdktsVHFuYXpQVjB1RV95VGlPYWR3MzgwcUlDQXk3QkRuQWFUTDBXaHV2TW1HMG9PMVgwTzZVT0xyVXQ5RVUzNjdpVkdpellueDhrMzhPVkVJRDJ0ZldITE9IRWs1OXlpd0VOVW5pam9u?oc=5",
       "published": "Fri, 17 Jul 2026 12:54:00 GMT",
+      "type": "rss",
+      "search_term": "hypotheek"
+    },
+    {
+      "source": "Zoekterm: hypotheek",
+      "title": "Banken verdienen ook bij lage hypotheekmarges goed aan klanten - NU",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaV9DWFY4VTBEOXRtZFdwWmNQRXVhOVJ1Ml91M2V2b1dqT190MEpoRkZIUWliUU5WMDVHYmhObTVyNVpnT3I0MzZRWHc3UXh3eE5jaEFBLVZtMG1DZ2tHN2lkOTVDOEdWak1PUE1WZG5BU0JBN2NBREF1X2hzckxmeUpjQTk0RmpOV1hlSmc1Q3piZGptLWd0Q1JUSURQLTd2UC12aA?oc=5",
+      "published": "Thu, 16 Jul 2026 11:08:19 GMT",
       "type": "rss",
       "search_term": "hypotheek"
     },
@@ -2189,17 +2189,17 @@
     },
     {
       "source": "Zoekterm: NRC AND woningmarkt",
-      "title": "In recordtempo hebben beleggers de Nederlandse woningmarkt verlaten - NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRjlyWFV3X0JMZ3Bxc3lEcHZqUjYwZHFmZkQ4SEJTeU1oMWsxVlItbXdmNVllV1Q5ZTF4eVZIenpUTVh0Q2FYaWpfaThFekFlVDhZbW13WkphSFU1S1FwZmJxQVlnSnpzcWxBRGsxeFZmNmZJSmdzT29aQV9oRzV5VFhuQ0xDeWNnekJJSUdZR0RjS0dsZkF2XzVwMGlCSThmdThCaGYxX1I4Ym1pU3lEbmdPdw?oc=5",
-      "published": "Thu, 26 Feb 2026 08:00:00 GMT",
+      "title": "Na ‘constructief gesprek’ met NVM-makelaars lijkt weg vrij voor nieuw prijsbeleid Funda - NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWhtYTZVXzY1LUdBc0g0czdDYlBzUExzaFBmV1FBY2VUU3ZUQkVfOHZqR1NUa0hpeWJ5WVNNMU9ZV1lTSzBRaGlvZmxhTWMtUzhGV0pJU3g5cm1hcEsyZ1B6WVZnRi1mYTNjWWhMNUZMdkR1aThHTDl0bkczS1M2TW1SeFJmbDhXempRbnI2SlFoVVUwaVlMU0tNZllua0lhQld1TjdPbzRUVHpRbjlpelFWbXNnUV9Pc1Q4RUFwdEdWcm8yaHo4emlZQQ?oc=5",
+      "published": "Fri, 17 Jul 2026 15:09:32 GMT",
       "type": "rss",
       "search_term": "NRC AND woningmarkt"
     },
     {
       "source": "Zoekterm: NRC AND woningmarkt",
-      "title": "Na ‘constructief gesprek’ met NVM-makelaars lijkt weg vrij voor nieuw prijsbeleid Funda - NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPdWhtYTZVXzY1LUdBc0g0czdDYlBzUExzaFBmV1FBY2VUU3ZUQkVfOHZqR1NUa0hpeWJ5WVNNMU9ZV1lTSzBRaGlvZmxhTWMtUzhGV0pJU3g5cm1hcEsyZ1B6WVZnRi1mYTNjWWhMNUZMdkR1aThHTDl0bkczS1M2TW1SeFJmbDhXempRbnI2SlFoVVUwaVlMU0tNZllua0lhQld1TjdPbzRUVHpRbjlpelFWbXNnUV9Pc1Q4RUFwdEdWcm8yaHo4emlZQQ?oc=5",
-      "published": "Fri, 17 Jul 2026 15:09:32 GMT",
+      "title": "In recordtempo hebben beleggers de Nederlandse woningmarkt verlaten - NRC - Nieuws, achtergronden en onderzoeksjournalistiek",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRjlyWFV3X0JMZ3Bxc3lEcHZqUjYwZHFmZkQ4SEJTeU1oMWsxVlItbXdmNVllV1Q5ZTF4eVZIenpUTVh0Q2FYaWpfaThFekFlVDhZbW13WkphSFU1S1FwZmJxQVlnSnpzcWxBRGsxeFZmNmZJSmdzT29aQV9oRzV5VFhuQ0xDeWNnekJJSUdZR0RjS0dsZkF2XzVwMGlCSThmdThCaGYxX1I4Ym1pU3lEbmdPdw?oc=5",
+      "published": "Thu, 26 Feb 2026 08:00:00 GMT",
       "type": "rss",
       "search_term": "NRC AND woningmarkt"
     },
@@ -2445,17 +2445,17 @@
     },
     {
       "source": "Zoekterm: vastgoed",
-      "title": "LVDH Finance in gesprek met intermediairs: ‘Onvoorspelbaar beleid schaadt de markt’ - Vastgoedjournaal.nl",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQU2JEbmIzT0JvTU1NRDRUYjJXUXZHcld0TUdMMkFZS0ZGVzNDUkdLRmRDMTc3VTVWbzdPb2xvaWpzdGdCOFN5RWE0Y1ZoZ192ampWLTZlTFE5X2hvMnhaSjQzN0NsODdpcHc2dWxGTWdhX3ZYRUNCMmx5RjBRS1VwNl9ObXlycGszSnM4MDRHVkZrOW82aEZrWG9GQ21uN1hrVHNGZ01PWkRZWURCWVB3eWVEdDB2T3dEdWdF?oc=5",
-      "published": "Tue, 21 Jul 2026 08:00:05 GMT",
+      "title": "Logistiek vastgoed koelt af: toplocatie en duurzame warehouses blijven in trek - Warehouse Totaal",
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPQ3lNOWtXRTg0d3hTS0t2NGZsUHc1dThqSnh2TWl2MDNkWDlCS2haTDA5VmxpdWMzbjk3WXRWZlZqTVBGYjMyc2pSUkR6TDlBS2FYZ3lKVEx0bjcyQi1qZEt1SXo0aEFUcGYxMzlqd1ItQ1NrQ3Z0RWh3V200bkc0U2wzWHJYZm1qbTRrQWVpck40bnZWdldOeTQzQ1lpVUg1VER2eHdneFhPQS1sRnI3YTBlRFJrX1N3SGZicEZscklSZzEtTkhxRU1fR0hxeVoxWHdENHBCQW1BaHd6WmJsaVNKX1U?oc=5",
+      "published": "Fri, 17 Jul 2026 07:29:27 GMT",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Zoekterm: vastgoed",
-      "title": "Logistiek vastgoed koelt af: toplocatie en duurzame warehouses blijven in trek - Warehouse Totaal",
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPQ3lNOWtXRTg0d3hTS0t2NGZsUHc1dThqSnh2TWl2MDNkWDlCS2haTDA5VmxpdWMzbjk3WXRWZlZqTVBGYjMyc2pSUkR6TDlBS2FYZ3lKVEx0bjcyQi1qZEt1SXo0aEFUcGYxMzlqd1ItQ1NrQ3Z0RWh3V200bkc0U2wzWHJYZm1qbTRrQWVpck40bnZWdldOeTQzQ1lpVUg1VER2eHdneFhPQS1sRnI3YTBlRFJrX1N3SGZicEZscklSZzEtTkhxRU1fR0hxeVoxWHdENHBCQW1BaHd6WmJsaVNKX1U?oc=5",
-      "published": "Fri, 17 Jul 2026 07:29:27 GMT",
+      "title": "LVDH Finance in gesprek met intermediairs: ‘Onvoorspelbaar beleid schaadt de markt’ - Vastgoedjournaal.nl",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQU2JEbmIzT0JvTU1NRDRUYjJXUXZHcld0TUdMMkFZS0ZGVzNDUkdLRmRDMTc3VTVWbzdPb2xvaWpzdGdCOFN5RWE0Y1ZoZ192ampWLTZlTFE5X2hvMnhaSjQzN0NsODdpcHc2dWxGTWdhX3ZYRUNCMmx5RjBRS1VwNl9ObXlycGszSnM4MDRHVkZrOW82aEZrWG9GQ21uN1hrVHNGZ01PWkRZWURCWVB3eWVEdDB2T3dEdWdF?oc=5",
+      "published": "Tue, 21 Jul 2026 08:00:05 GMT",
       "type": "rss",
       "search_term": "vastgoed"
     },
@@ -2533,14 +2533,6 @@
     },
     {
       "source": "Zoekterm: woning",
-      "title": "🔴 Scooterrijder zwaargewond na aanrijding met bestelbus • Dode in woning met hennepplantage niet door misdrijf om het leven gekomen - NH Nieuws",
-      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNLXllMmY1ay1OSnJDZng3dTNVMDdJNjRSLWUxTWg1eTNnUWg4QWNCNzFkSEVVaVZMSTViVUdDeDBaU2F3UUFoNHFCU0diYkJfNU9kYi1mUFk1SV8tNFBqTms2U1NhYXNNU3VFM3hJOElFeUxvcW81VTR6ODRBbU13MjQza2ZUSkxlSU1QSnVONE5yTVJ0TjJhLVZ6QlZqMEtLNS1jMXEyN2tKbHBwYVp1b1o5R29fYVVqLVVpOGVRbHk5TlhhaFNUYVlEQW9BbTNXbjB3RFowenNOZlRhVGl0UTJQMll0N2MyQnE3VFBUQTBkV1FqbnpzcA?oc=5",
-      "published": "Mon, 20 Jul 2026 20:19:00 GMT",
-      "type": "rss",
-      "search_term": "woning"
-    },
-    {
-      "source": "Zoekterm: woning",
       "title": "Amsterdamse makelaar adviseert koper snel te slopen, voor zijn pand op de monumentenlijst komt: ‘Hup, alles eruit’ - Het Parool",
       "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQZG55ektsWUgtMC1GNjhDV0hYZDhHdmVhMG05UFNTdlNHVDJvTjU1Uk5WUE8ydW92anluZWxwMUxrUVIxRDZ4Q2c5RjJZSlhwUGtUZm1hRVB0TFlDcHFOUm12ZlRtTXhodk5JS3pXNzJ5OW5QeEc4UWVSVHFaZDlOVzNibnBGbHhQUEV1Z2NvSFFsbEQwOEtoMFdoNW01YXJkaXVmS21aNm9zRVlVMnRyeEVPTzZrRFZsMXMzYzk2SHRyWkRDMTRIREl2V3J2ckJiY2lfZUJlNllCd25wN3FjQXZPenhpdw?oc=5",
       "published": "Tue, 21 Jul 2026 01:00:00 GMT",
@@ -2552,6 +2544,14 @@
       "title": "‘Alleen al mijn woning is 70.000 euro meer waard’: hoogleraar ziet uitweg voor vastgelopen megaproject - AD.nl",
       "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOb2MtUVRYUUg1ZW5VNlQxbFB2TTFWYmRScURDREVWRmZsb1RwOFp5RThjOEhkWkFIV0N0TE1qM1RkNkI3U211dHhKOWlRWnprLVhLOER3b1JrTHczTG9kSlVUQzZQZ01IUTVTUXoxR0xwT1VscFRkRll4MGJRZy1BbWN3MWpKSHVUb01nTmkyTVJWcEh0aUprQlJCTjFWNGZ1VnpsY05yb2tPNDZMZnJ5R2lOVGw5czQ2Ty1Bd2ZZWnQ5X2tNZ09pbHplRDJCV3NubmROWQ?oc=5",
       "published": "Mon, 20 Jul 2026 19:28:00 GMT",
+      "type": "rss",
+      "search_term": "woning"
+    },
+    {
+      "source": "Zoekterm: woning",
+      "title": "🔴 Scooterrijder zwaargewond na aanrijding met bestelbus • Dode in woning met hennepplantage niet door misdrijf om het leven gekomen - NH Nieuws",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNLXllMmY1ay1OSnJDZng3dTNVMDdJNjRSLWUxTWg1eTNnUWg4QWNCNzFkSEVVaVZMSTViVUdDeDBaU2F3UUFoNHFCU0diYkJfNU9kYi1mUFk1SV8tNFBqTms2U1NhYXNNU3VFM3hJOElFeUxvcW81VTR6ODRBbU13MjQza2ZUSkxlSU1QSnVONE5yTVJ0TjJhLVZ6QlZqMEtLNS1jMXEyN2tKbHBwYVp1b1o5R29fYVVqLVVpOGVRbHk5TlhhaFNUYVlEQW9BbTNXbjB3RFowenNOZlRhVGl0UTJQMll0N2MyQnE3VFBUQTBkV1FqbnpzcA?oc=5",
+      "published": "Mon, 20 Jul 2026 20:19:00 GMT",
       "type": "rss",
       "search_term": "woning"
     },
@@ -2605,9 +2605,9 @@
     },
     {
       "source": "Zoekterm: woning",
-      "title": "🔴 Dode in woning met hennepplantage niet door misdrijf om het leven gekomen • Metershoge vlammen bij brand in bouwafvalbak - NH Nieuws",
-      "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPbXozV3JCY2t5R2FTQkZyOHFYV1RjUnNDdzlnSlN5bl9DVFJFUHRHeDhEMnJUem5INDB2QVhGSm5Cdko5M1BodndxbnBTUktDa3pQb0tvTzUwcTF6QjJwZm42d2FlLUJPTEJxMzNlSTQySmhvd01ZUHYweTJNdXJfb3RDcjhwY3hGWFIwbUpNR3R0SWlfZ3pFbVVmUE8wTFRjUmppYmo1eXVLYjNQU0pRWnJMYzBSaUZRYnpCUFhheHZkYUNIR3ZyMXNaS2FWU2JBNTVCRUh4NFdEVHFoRUNwY21UeW1IMTU4N0lDOA?oc=5",
-      "published": "Tue, 21 Jul 2026 07:39:33 GMT",
+      "title": "Dode in woning met hennepplantage niet door misdrijf om het leven gekomen - NH Nieuws",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbXJyU0pGUHdSMWk0OElLQS1oM1l3ZWJMdW45Q2l4a2JaS1h6UngzUjdRajJhZmIwZUJXMmRCeUxNTFR5V1NEZ3A3S19lZjhKSEI1VHl3eWJ5UWJYNmhqdThIZndIQmtFaTVlZWp4SFpIY2Rwb3N4UFE5RkdkbDFLWElxa1JJOGF3NE5yYkRQSnNNLWJYazhsOGpjSmtGbXV3V0NTbHlCTDdHZUEzVWNIMw?oc=5",
+      "published": "Tue, 21 Jul 2026 07:29:29 GMT",
       "type": "rss",
       "search_term": "woning"
     },
@@ -2725,121 +2725,121 @@
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBLIM:2026:7352 Rechtbank Limburg, 21-07-2026, 03.340196.23",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLIM:2026:7352&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 15:04:14 +0200",
+      "title": "ECLI:NL:RBAMS:2026:7301 Rechtbank Amsterdam, 16-07-2026, 1313961925",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2026:7301&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:27:10 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBDHA:2026:18580 Rechtbank Den Haag, 06-07-2026, 09/086232-26, 09/046138-26 (ttz. gev.) en 09/304103-23 (tul)",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2026:18580&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 15:01:10 +0200",
+      "title": "ECLI:NL:RBAMS:2026:7398 Rechtbank Amsterdam, 16-07-2026, 13/090918-26 (herstelvonnis)",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2026:7398&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:25:42 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBDHA:2026:20312 Rechtbank Den Haag, 21-07-2026, NL26.38740",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2026:20312&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 15:00:42 +0200",
+      "title": "ECLI:NL:RBAMS:2026:7080 Rechtbank Amsterdam, 11-06-2026, 12176312 \\ KK EXPL 26-225",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2026:7080&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:25:40 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:CRVB:2026:886 Centrale Raad van Beroep, 23-06-2026, 24/2468 PW-PV",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2026:886&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 15:00:40 +0200",
+      "title": "ECLI:NL:GHARL:2026:4790 Gerechtshof Arnhem-Leeuwarden, 21-07-2026, 21-000190-26",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:GHARL:2026:4790&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:25:10 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBNHO:2026:8693 Rechtbank Noord-Holland, 15-07-2026, HAA 26/2656",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2026:8693&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 15:00:16 +0200",
+      "title": "ECLI:NL:RBAMS:2026:7394 Rechtbank Amsterdam, 16-07-2026, 13/090908-26",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2026:7394&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:24:40 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:CRVB:2026:884 Centrale Raad van Beroep, 30-06-2026, 24/2470 PW-PV",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2026:884&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:59:10 +0200",
+      "title": "ECLI:NL:RBGEL:2024:9893 Rechtbank Gelderland, 15-07-2024, C/05/435005 / FZ RK 24/1024",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBGEL:2024:9893&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:24:40 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBDHA:2026:20275 Rechtbank Den Haag, 11-03-2026, NL25.42242",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2026:20275&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:58:10 +0200",
+      "title": "ECLI:NL:RBAMS:2026:7397 Rechtbank Amsterdam, 16-07-2026, 13/090918-26",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2026:7397&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:23:11 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:CRVB:2026:889 Centrale Raad van Beroep, 07-07-2026, 24/759 PW",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2026:889&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:57:43 +0200",
+      "title": "ECLI:NL:RBAMS:2026:7391 Rechtbank Amsterdam, 16-07-2026, 13/090912-26",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2026:7391&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:23:10 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBMNE:2026:4518 Rechtbank Midden-Nederland, 08-07-2026, C/16/612042 / KL ZA 26-145",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2026:4518&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:56:42 +0200",
+      "title": "ECLI:NL:RBAMS:2026:7393 Rechtbank Amsterdam, 16-07-2026, 13/090916-26",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2026:7393&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:22:40 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:CRVB:2026:888 Centrale Raad van Beroep, 30-06-2026, 21/4452 PW",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2026:888&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:56:10 +0200",
+      "title": "ECLI:NL:RBAMS:2026:7453 Rechtbank Amsterdam, 07-07-2026, 13-039340-26",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2026:7453&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:18:40 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBLIM:2026:6255 Rechtbank Limburg, 08-07-2026, C/03/334914 / HA ZA 24/434",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLIM:2026:6255&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:56:10 +0200",
+      "title": "ECLI:NL:RBAMS:2026:7457 Rechtbank Amsterdam, 07-07-2026, 13-121522-26",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBAMS:2026:7457&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:17:41 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBDHA:2026:18545 Rechtbank Den Haag, 18-06-2026, NL26.10328",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2026:18545&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:55:40 +0200",
+      "title": "ECLI:NL:RBMNE:2026:4517 Rechtbank Midden-Nederland, 08-07-2026, 11962562 \\ MC EXPL  25-6108",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBMNE:2026:4517&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:17:40 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBDHA:2026:17880 Rechtbank Den Haag, 01-06-2026, C/09/704308 / FA RK 26-4298",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2026:17880&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:55:10 +0200",
+      "title": "ECLI:NL:CRVB:2026:955 Centrale Raad van Beroep, 18-06-2026, 24/2520 POL",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2026:955&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:17:12 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBNHO:2026:9121 Rechtbank Noord-Holland, 21-07-2026, 15/169160-23",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBNHO:2026:9121&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:53:10 +0200",
+      "title": "ECLI:NL:RBDHA:2026:18554 Rechtbank Den Haag, 18-06-2026, NL26.10444",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBDHA:2026:18554&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:17:10 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     },
     {
       "source": "Rechtspraak.nl: vastgoed",
-      "title": "ECLI:NL:RBLIM:2026:7350 Rechtbank Limburg, 21-07-2026, 03.340194.23",
-      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:RBLIM:2026:7350&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
-      "published": "Tue, 21 Jul 2026 14:52:40 +0200",
+      "title": "ECLI:NL:CRVB:2026:931 Centrale Raad van Beroep, 14-07-2026, 23/2433 PW",
+      "link": "https://deeplink.rechtspraak.nl/uitspraak?id=ECLI:NL:CRVB:2026:931&pk_campaign=rss&pk_medium=rss&pk_keyword=uitspraken",
+      "published": "Tue, 21 Jul 2026 15:16:40 +0200",
       "type": "rss",
       "search_term": "vastgoed"
     }
