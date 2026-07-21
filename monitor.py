@@ -1,5 +1,7 @@
 from pathlib import Path
 import json
+import re
+import html
 import feedparser
 
 RSS_FEEDS = [
@@ -17,43 +19,53 @@ RSS_FEEDS = [
     }
 ]
 
-HOUSING_WORDS = [
-    "woning", "woningen", "woningmarkt", "woonmarkt", "wooncrisis",
-    "huis", "huizen", "huisvesting", "volkshuisvesting",
-    "huur", "huren", "huurder", "huurders", "huurwoning", "huurwoningen",
-    "sociale huur", "middenhuur", "vrije sector", "betaalbaar wonen",
-    "koopwoning", "koopwoningen", "hypotheek", "doorstroming",
-    "woningbouw", "nieuwbouw", "bouwproject", "bouwlocatie", "woondeal"
+HOUSING_TERMS = [
+    "woning", "woningen", "woningmarkt", "wooncrisis", "woonbeleid",
+    "huisvesting", "volkshuisvesting", "woningbouw", "nieuwbouw",
+    "huur", "huurwoning", "huurwoningen", "huurmarkt", "huurprijs",
+    "huurprijzen", "huurder", "huurders", "middenhuur", "sociale huur",
+    "vrije sector", "koopwoning", "koopwoningen", "hypotheek",
+    "doorstroming", "woondeal", "woonwijk", "woonlasten"
 ]
 
-HOMELESS_WORDS = [
+HOMELESS_TERMS = [
     "dakloos", "dakloosheid", "thuisloos", "thuisloosheid",
-    "opvang", "maatschappelijke opvang", "nachtopvang", "crisisopvang"
+    "maatschappelijke opvang", "nachtopvang", "crisisopvang"
 ]
 
-REALESTATE_WORDS = [
-    "vastgoed", "belegger", "beleggers", "institutionele belegger",
-    "projectontwikkelaar", "ontwikkelaar", "portefeuille",
-    "transactie", "transacties", "vastgoeddeal", "woningbelegger"
+REALESTATE_TERMS = [
+    "vastgoed", "vastgoedmarkt", "woningbelegger", "woningbeleggers",
+    "belegger", "beleggers", "portefeuille", "portefeuilles",
+    "transactie", "transacties", "projectontwikkelaar",
+    "projectontwikkelaars", "ontwikkelaar", "ontwikkelaars"
 ]
 
-POLICY_WORDS = [
-    "minister", "kamer", "tweede kamer", "beleid", "wet", "wetsvoorstel",
-    "regeling", "ministerie", "staatssecretaris", "volkshuisvesting",
-    "woonbeleid", "huurbeleid", "regiewet", "woonminister"
-]
-
-IRRELEVANT_WORDS = [
-    "voetbal", "sport", "tennis", "wielrennen", "festival", "muziek",
-    "songfestival", "weer", "verkeer", "files", "brand", "moord",
-    "verkiezing", "buitenland", "oekraïne", "gaza"
+POLICY_TERMS = [
+    "woonminister", "minister van volkshuisvesting", "volkshuisvesting",
+    "regiewet", "huurbeleid", "woonbeleid", "woningwet",
+    "betaalbaar wonen", "huisvestingswet", "huurtoeslag"
 ]
 
 def clean_text(value):
-    return " ".join((value or "").strip().split())
+    text = html.unescape(value or "")
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
 
-def contains_any(text, words):
-    return any(word in text for word in words)
+def contains_term(text, terms):
+    text = f" {text.lower()} "
+    for term in terms:
+        if f" {term.lower()} " in text:
+            return True
+    return False
+
+def matching_terms(text, terms):
+    text = f" {text.lower()} "
+    found = []
+    for term in terms:
+        if f" {term.lower()} " in text:
+            found.append(term)
+    return found
 
 def make_tags(title, summary, source_category):
     text = f"{title} {summary}".lower()
@@ -62,21 +74,21 @@ def make_tags(title, summary, source_category):
     matched_angles = []
     labels = []
 
-    has_housing = contains_any(text, HOUSING_WORDS)
-    has_homeless = contains_any(text, HOMELESS_WORDS)
-    has_realestate = contains_any(text, REALESTATE_WORDS)
-    has_policy = source_category == "policy" or contains_any(text, POLICY_WORDS)
+    housing_hits = matching_terms(text, HOUSING_TERMS)
+    homeless_hits = matching_terms(text, HOMELESS_TERMS)
+    realestate_hits = matching_terms(text, REALESTATE_TERMS)
+    policy_hits = matching_terms(text, POLICY_TERMS)
 
-    if has_housing:
+    if housing_hits:
         matched_profiles.append("woningmarkt")
 
-    if has_homeless:
+    if homeless_hits:
         matched_profiles.append("dakloosheid")
 
-    if has_realestate:
+    if realestate_hits:
         matched_profiles.append("vastgoedmarkt_en_transacties")
 
-    if has_policy:
+    if source_category == "policy" and (housing_hits or homeless_hits or realestate_hits or policy_hits):
         matched_angles.append("beleid")
 
     if matched_profiles:
@@ -87,16 +99,15 @@ def make_tags(title, summary, source_category):
 def is_relevant(title, summary, source_category):
     text = f"{title} {summary}".lower()
 
-    has_housing = contains_any(text, HOUSING_WORDS)
-    has_homeless = contains_any(text, HOMELESS_WORDS)
-    has_realestate = contains_any(text, REALESTATE_WORDS)
-    has_policy = source_category == "policy" and contains_any(text, HOUSING_WORDS + HOMELESS_WORDS + REALESTATE_WORDS + POLICY_WORDS)
-    has_irrelevant = contains_any(text, IRRELEVANT_WORDS)
+    has_housing = contains_term(text, HOUSING_TERMS)
+    has_homeless = contains_term(text, HOMELESS_TERMS)
+    has_realestate = contains_term(text, REALESTATE_TERMS)
+    has_policy = contains_term(text, POLICY_TERMS)
 
-    if has_irrelevant and not (has_housing or has_homeless or has_realestate):
-        return False
+    if source_category == "policy":
+        return has_housing or has_homeless or has_realestate or has_policy
 
-    return has_housing or has_homeless or has_realestate or has_policy
+    return has_housing or has_homeless or has_realestate
 
 def parse_feed(feed_conf):
     parsed = feedparser.parse(feed_conf["url"])
