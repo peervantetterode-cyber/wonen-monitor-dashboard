@@ -110,8 +110,34 @@ def make_tags(title, summary, source_category):
     return matched_profiles, matched_angles, labels
 
 def is_relevant(title, summary, source_category):
-    return True
+    title_l = title.lower()
+    summary_l = summary.lower()
 
+    title_hits = (
+        has_term(title_l, HOUSING_TERMS)
+        or has_term(title_l, HOMELESS_TERMS)
+        or has_term(title_l, REALESTATE_TERMS)
+        or has_term(title_l, POLICY_TERMS)
+        or "woon" in title_l
+        or "woning" in title_l
+        or "huur" in title_l
+        or "dakloos" in title_l
+        or "vastgoed" in title_l
+        or "bouw" in title_l
+        or "huisvesting" in title_l
+    )
+
+    summary_hits = (
+        has_term(summary_l, HOUSING_TERMS)
+        or has_term(summary_l, HOMELESS_TERMS)
+        or has_term(summary_l, REALESTATE_TERMS)
+        or has_term(summary_l, POLICY_TERMS)
+    )
+
+    if source_category == "policy":
+        return title_hits or summary_hits
+
+    return title_hits
 def parse_feed(feed_conf):
     parsed = feedparser.parse(feed_conf["url"])
     items = []
