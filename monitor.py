@@ -6,12 +6,6 @@ import feedparser
 
 RSS_FEEDS = [
     {
-        "source_id": "nos",
-        "source_name": "NOS",
-        "source_category": "media",
-        "url": "https://feeds.nos.nl/nosnieuwsbinnenland"
-    },
-    {
         "source_id": "rijksoverheid_algemeen",
         "source_name": "Rijksoverheid",
         "source_category": "policy",
@@ -30,7 +24,6 @@ RSS_FEEDS = [
         "url": "https://feeds.rijksoverheid.nl/ministeries/ministerie-van-volkshuisvesting-en-ruimtelijke-ordening/nieuws.rss"
     }
 ]
-
 HOUSING_TERMS = [
     "woning", "woningen", "woningmarkt", "wooncrisis", "huisvesting",
     "volkshuisvesting", "woningbouw", "nieuwbouw", "huur", "huurprijs",
