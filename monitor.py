@@ -5,6 +5,53 @@ import html
 import feedparser
 
 RSS_FEEDS = [
+    # Kranten en algemene media
+    {
+        "source_id": "fd",
+        "source_name": "FD",
+        "source_category": "media",
+        "url": "https://fd.nl/?rss"
+    },
+    {
+        "source_id": "volkskrant",
+        "source_name": "de Volkskrant",
+        "source_category": "media",
+        "url": "https://www.volkskrant.nl/rss/feeds"  # kies hier later een specifieke feed-URL uit
+    },
+    {
+        "source_id": "nrc",
+        "source_name": "NRC",
+        "source_category": "media",
+        "url": ">>> vul hier de NRC-rss-url in die je kiest <<<"
+    },
+    {
+        "source_id": "telegraaf",
+        "source_name": "De Telegraaf",
+        "source_category": "media",
+        "url": ">>> vul hier de Telegraaf-rss-url in <<<"
+    },
+    {
+        "source_id": "nos",
+        "source_name": "NOS",
+        "source_category": "media",
+        "url": "https://feeds.nos.nl/nosnieuwsbinnenland"
+    },
+    {
+        "source_id": "rtl",
+        "source_name": "RTL Nieuws",
+        "source_category": "media",
+        "url": ">>> concrete RTL-nieuws-rss-url, bijv. via rtlnieuws.nl/rss <<<"
+    },
+
+    # Onderzoeksjournalistiek
+    {
+        "source_id": "ftm",
+        "source_name": "Follow the Money",
+        "source_category": "media",
+        "url": ">>> evt. FTM-rss of notificatie-feed, alleen titel+link gebruiken <<<"
+    },
+
+    # Beleid, overheid, parlement
     {
         "source_id": "rijksoverheid_algemeen",
         "source_name": "Rijksoverheid",
@@ -18,10 +65,64 @@ RSS_FEEDS = [
         "url": "https://feeds.rijksoverheid.nl/onderwerpen/volkshuisvesting/nieuws.rss"
     },
     {
-        "source_id": "min_vro_nieuws",
+        "source_id": "min_vro",
         "source_name": "Ministerie VRO",
         "source_category": "policy",
         "url": "https://feeds.rijksoverheid.nl/ministeries/ministerie-van-volkshuisvesting-en-ruimtelijke-ordening/nieuws.rss"
+    },
+    {
+        "source_id": "tweedekamer",
+        "source_name": "Tweede Kamer",
+        "source_category": "politics",
+        "url": ">>> specifieke RSS voor activiteiten/kamerstukken over wonen <<<"
+    },
+    {
+        "source_id": "cbs",
+        "source_name": "CBS",
+        "source_category": "data",
+        "url": ">>> CBS-nieuws- of publicatie-rss over woningmarkt <<<"
+    },
+
+    # Sector: corporaties, huurders
+    {
+        "source_id": "aedes",
+        "source_name": "Aedes",
+        "source_category": "sector",
+        "url": ">>> Aedes-rss-url <<<"
+    },
+    {
+        "source_id": "woonbond",
+        "source_name": "Woonbond",
+        "source_category": "sector",
+        "url": "https://www.woonbond.nl/rss.xml"
+    },
+
+    # Vastgoedmedia
+    {
+        "source_id": "vastgoednieuws",
+        "source_name": "Vastgoednieuws",
+        "source_category": "vastgoed",
+        "url": ">>> rss-url Vastgoednieuws <<<"
+    },
+    {
+        "source_id": "propertynl",
+        "source_name": "PropertyNL",
+        "source_category": "vastgoed",
+        "url": ">>> rss-url PropertyNL <<<"
+    },
+
+    # Meta-bronnen
+    {
+        "source_id": "google_alerts",
+        "source_name": "Google Alerts",
+        "source_category": "meta",
+        "url": ">>> 1 of meer persoonlijke Google-Alerts-rss-links <<<"
+    },
+    {
+        "source_id": "linkedin",
+        "source_name": "LinkedIn",
+        "source_category": "meta",
+        "url": ">>> evt. via externe dienst om LinkedIn-updates naar rss te brengen <<<"
     }
 ]
 HOUSING_TERMS = [
