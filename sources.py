@@ -54,7 +54,15 @@ RECHTSPRAAK_TERMS = [
     "vastgoed",
     "huurrecht",
     "woningcorporatie",
+    "sociale huur",    
+    "woonruimte",
+    "huisvesting",
     "sociale huur",
+    "huurwoning",
+    "woningcorporatie",
+    "dakloosheid",
+    "huurtoeslag",
+    "omgevingswet wonen",
 ]
 
 def rechtspraak_rss_url(term: str) -> str:
