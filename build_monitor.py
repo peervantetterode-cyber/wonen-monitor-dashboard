@@ -9,24 +9,250 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(__file__))
-from sources import SITE_FEEDS, SCRAPE_SITES, SEARCH_TERMS, google_news_rss_url, RECHTSPRAAK_TERMS, rechtspraak_rss_url
+from sources import (
+    SITE_FEEDS,
+    SCRAPE_SITES,
+    SEARCH_TERMS,
+    google_news_rss_url,
+    RECHTSPRAAK_TERMS,
+    rechtspraak_rss_url,
+)
+
+# --------------------------------------------------
+# Config (headers / timeouts)
+# --------------------------------------------------
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (compatible; WoonmonitorBot/1.0; +https://example.com)"
+}
+TIMEOUT = 10
+
+# --------------------------------------------------
+# Keywords: alles uit de Kingma‑tekst, geclusterd
+# --------------------------------------------------
 
 WOON_KEYWORDS = [
-    "woning", "woningen", "woningmarkt", "huizenmarkt",
-    "huur", "huurt", "huurprijs", "huurprijzen", "huurmarkt",
+    # Dakloosheid / mensenrecht / woningnood
+    "dakloos", "daklozen", "dakloosheid",
+    "thuisloos", "thuislozen", "thuisloosheid",
+    "zwerver", "zwervers", "zwerfjongeren",
+    "opvang", "noodopvang", "crisisopvang",
+    "nachtopvang", "winteropvang",
+    "maatschappelijke opvang",
+    "bed-bad-brood",
+    "recht op huisvesting",
+    "huisvesting als mensenrecht",
+    "voldoende woongelegenheid",
+    "woningnood", "huisvestingscrisis",
+    "woningtekort",
+
+    # Volkshuisvesting / sociale huur / wachttijd
+    "volkshuisvesting",
+    "sociale huur", "sociale huurwoning", "sociale huurwoningen",
+    "betaalbare huurwoningen", "betaalbare huur",
+    "huurprijs", "huurprijzen",
+    "huurverhoging", "huurverlaging",
+    "huurtoeslag",
+    "woningvoorraad", "bestaande woningvoorraad",
+    "wachtlijst", "wachttijd", "wachtrij", "inschrijfduur",
+
+    # Woningmarkt / koop / huur / starters
+    "woningmarkt", "huizenmarkt",
+    "koopwoning", "koopwoningen",
+    "huursector", "huurmarkt",
+    "vrije sector", "vrije huursector", "middenhuur",
+    "private sector", "private huurmarkt",
+    "huurders", "kopers",
+    "starters", "starter op de woningmarkt",
+    "eenpersoonshuishoudens", "alleenstaanden",
+    "woonlasten", "huurlast", "maximaal verantwoorde huurlast",
+    "huizenprijzen", "huizenprijs", "koopprijzen",
+    "overwaarde", "eigenwoningwaarde",
+
+    # Financiering / hypotheken / fiscale regelingen
     "hypotheek", "hypotheken",
-    "vastgoed", "vastgoedmarkt",
-    "huurwoning", "koopwoning", "huurwoningen", "koopwoningen",
-    "corporatie", "woningcorporatie", "woningcorporaties"
+    "hypotheekmarkt", "hypotheekschuld",
+    "hypotheekrenteaftrek",
+    "leenruimte", "maximale leenbedrag", "maximale hypotheek",
+    "loan-to-value", "loan to value",
+    "loan-to-income", "loan to income",
+    "fiscale regeling", "fiscale regelingen",
+    "belastingvrij schenken", "jubelton",
+    "schenking voor de eigen woning",
+    "box 3", "vermogensrendementsheffing",
+    "subsidieprogramma", "bouwsubsidies", "bouwsubsidie",
+
+    # Grondbeleid / planbaten / grondprijzen
+    "grondbeleid", "grondmarkt",
+    "bouwgrond", "bouwlocatie", "bouwlocaties",
+    "grondprijs", "grondprijzen",
+    "grondexploitatie", "grondexploitatieplan",
+    "grondposities", "grondpositie",
+    "grondeigenaar", "grondeigenaren",
+    "agrarische grond", "landbouwgrond",
+    "bestemmingswijziging", "bestemmingsplanwijziging",
+    "woonbestemming",
+    "planbaten", "planbatenheffing",
+    "grondwaardestijging", "grondwaardebelasting",
+    "onbebouwde bouwgrond",
+    "erfpacht", "erfpachtcanon", "canon",
+    "grondbedrijf",
+
+    # Beleggers / speculatie / tweede woningen
+    "beleggers", "vastgoedbeleggers", "institutionele beleggers",
+    "speculanten", "speculatie op de woningmarkt",
+    "particuliere verhuur", "particuliere verhuurders",
+    "tweede woning", "tweede woningen",
+    "buy-to-let", "buy to let",
+    "verhuurhypotheek",
+    "uitponden",
+
+    # Bouw / ontwikkeltraject / regels / nieuwe woonvormen
+    "nieuwbouw", "woningbouw", "woningbouwplannen", "woningbouwproject",
+    "bouwproductie", "bouwplannen", "bouwkosten",
+    "ontwikkeltraject", "projectontwikkelaar", "projectontwikkelaars",
+    "doorlooptijd", "omgevingsplan", "gebiedsontwikkeling",
+    "bouwvergunningen", "vergunningsprocedures",
+    "stikstofvergunning", "stikstofcrisis",
+    "natura 2000",
+    "co2-norm", "co2 normen", "duurzaam bouwen",
+    "renovatie", "renoveren", "sloopnieuwbouw",
+    "woningsplitsing", "splitsen van woningen",
+    "verdieping bijbouwen", "optoppen",
+    "tijdelijke woningen", "tijdelijke woonvoorzieningen",
+    "alternatieve woonvormen", "nieuwe woonvormen",
+    "eigendomsstructuren",
+
+    # Corporaties / belastingen / financiële spagaat
+    "woningcorporatie", "woningcorporaties", "corporatie", "corporaties",
+    "corporatiesector",
+    "woningwet", "verhuurderheffing",
+    "winstbelasting corporaties", "vennootschapsbelasting corporaties",
+    "speculatie in vastgoed",
+    "financieel mismanagement", "wanbestuur",
+    "nieuwbouwopgave", "bouwproductie corporaties",
+    "onderhoud", "verduurzaming woningvoorraad",
+    "huurverlaging", "inkomensafhankelijke huurverlaging",
+    "schuld corporaties", "leningen corporaties",
+
+    # Regie / politiek / oplossingen
+    "wooncrisis",
+    "minister voor volkshuisvesting",
+    "ministerie van volkshuisvesting en ruimtelijke ordening",
+    "vro", "regie terugpakken", "regie op de volkshuisvesting",
+    "bouwen bouwen bouwen",
+    "betaalbaarheidsgrens",
+    "wet betaalbare huur", "huurprijsregulering",
+    "geldkraan", "bieden op de woningmarkt",
+    "banken als geldscheppende instellingen",
+    "belasting op onbebouwde bouwgrond",
+    "publiek financieringsplan",
+    "planetaire grenzen",
+    "woning als speculatief object",
+    "huis weer om in te wonen",
 ]
 
-SPORT_BLACKLIST = [
-    "voetbal", "ajax", "feyenoord", "psv", "eredivisie",
-    "champions league", "europa league", "oranje", "wk", "ek"
+# --------------------------------------------------
+# Minder agressieve stopwoorden: vooral sport
+# --------------------------------------------------
+
+STOP_WORDS = [
+    "eredivisie", "keuken kampioen divisie",
+    "champions league", "europa league",
+    "wk voetbal", "ek voetbal",
+    "grand prix", "formule 1", "tour de france",
+
+    "ajax", "psv", "feyenoord", "az alkmaar",
+    "fc utrecht", "fc twente", "fc groningen",
+    "sc heerenveen", "nec nijmegen", "nac breda",
+    "vvv-venlo", "heracles", "sparta rotterdam",
 ]
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; WoonMonitorBot/1.0)"}
-TIMEOUT = 15
+# --------------------------------------------------
+# Prioriteit op basis van subset van de keywords
+# --------------------------------------------------
+
+HIGH_PRIORITY_KEYWORDS = [
+    # Kern van de wooncrisis
+    "dakloosheid", "dakloos", "thuisloosheid",
+    "volkshuisvesting", "woningnood", "wooncrisis", "woningtekort",
+    "sociale huur", "sociale huurwoningen",
+    "woningcorporatie", "woningcorporaties", "corporatiesector",
+    "huurtoeslag", "huurprijs", "huurprijzen", "huurverhoging",
+    "grondbeleid", "grondexploitatie", "grondprijs", "grondprijzen",
+    "planbaten", "planbatenheffing",
+    "hypotheekrenteaftrek", "hypotheekschuld",
+    "beleggers", "vastgoedbeleggers", "uitponden",
+]
+
+MEDIUM_PRIORITY_KEYWORDS = [
+    "huisvesting", "woningvoorraad", "bestaande woningvoorraad",
+    "woonlasten", "huurlast",
+    "starters", "starter op de woningmarkt",
+    "middenhuur", "vrije sector", "vrije huursector",
+    "koopwoning", "koopwoningen",
+    "huurmarkt", "huursector",
+    "woningbouw", "woningbouwplannen", "nieuwbouw",
+    "bouwlocatie", "bouwlocaties", "grondmarkt",
+    "projectontwikkelaar", "projectontwikkelaars",
+    "woningsplitsing", "renovatie", "sloopnieuwbouw",
+    "ouderenwoning", "seniorenwoning",
+]
+
+
+def get_priority(item: dict) -> str:
+    """
+    Bepaal prioriteit voor het dashboard:
+    - 'skip'  : duidelijk sport / irrelevant
+    - 'high'  : kern wooncrisis/dakloosheid/grond/hypotheek/corporaties
+    - 'medium': woon-achtig, maar iets minder kern
+    - 'low'   : raakt wonen wel, maar alleen via bredere woorden
+    """
+    text = " ".join([
+        item.get("title", ""),
+        item.get("summary", ""),
+        item.get("description", ""),
+        item.get("source", ""),
+    ]).lower()
+
+    if any(stop in text for stop in STOP_WORDS):
+        return "skip"
+
+    if any(kw in text for kw in HIGH_PRIORITY_KEYWORDS):
+        return "high"
+
+    if any(kw in text for kw in MEDIUM_PRIORITY_KEYWORDS):
+        return "medium"
+
+    if any(kw in text for kw in WOON_KEYWORDS):
+        return "low"
+
+    return "skip"
+
+
+def is_relevant(item: dict) -> bool:
+    """
+    Simpele ja/nee-filter:
+    - weg als 'skip'
+    - houden als er überhaupt een woon-achtig keyword in zit
+    """
+    prio = get_priority(item)
+    if prio == "skip":
+        return False
+
+    text = " ".join([
+        item.get("title", ""),
+        item.get("summary", ""),
+        item.get("description", ""),
+        item.get("source", ""),
+    ]).lower()
+
+    return any(kw in text for kw in WOON_KEYWORDS)
+
+
+# --------------------------------------------------
+# Fetch-functies
+# --------------------------------------------------
 
 def fetch_rss(name, url):
     items = []
@@ -45,6 +271,7 @@ def fetch_rss(name, url):
         print(f"[WARN] RSS failed for {name}: {e}")
     return items
 
+
 def try_discover_rss(base_url):
     try:
         resp = requests.get(base_url, headers=HEADERS, timeout=TIMEOUT)
@@ -59,6 +286,7 @@ def try_discover_rss(base_url):
     except Exception as e:
         print(f"[WARN] discovery failed for {base_url}: {e}")
     return None
+
 
 def fetch_scrape_fallback(name, base_url):
     discovered = try_discover_rss(base_url)
@@ -98,6 +326,7 @@ def fetch_scrape_fallback(name, base_url):
         print(f"[WARN] scrape failed for {name}: {e}")
     return items
 
+
 def fetch_search_term(term):
     url = google_news_rss_url(term)
     label = f"Zoekterm: {term}"
@@ -106,6 +335,7 @@ def fetch_search_term(term):
         it["search_term"] = term
     return items
 
+
 def fetch_rechtspraak_term(term):
     url = rechtspraak_rss_url(term)
     label = f"Rechtspraak.nl: {term}"
@@ -113,6 +343,7 @@ def fetch_rechtspraak_term(term):
     for it in items:
         it["search_term"] = term
     return items
+
 
 def dedupe(items):
     seen = set()
@@ -125,36 +356,55 @@ def dedupe(items):
         result.append(it)
     return result
 
-TRUSTED_HOUSING_SOURCES = [
-    "vastgoedmarkt",
-    "nul20",
-    "stadszaken",
-    "follow the money",
-    "het financieele dagblad",
-    "fd",
-    "bnr",
-    "het parool",
-]
 
-def is_relevant(item: dict) -> bool:
-    text = " ".join([
-        item.get("title", ""),
-        item.get("summary", ""),
-        item.get("description", ""),
-        item.get("source", ""),
-    ]).lower()
+# --------------------------------------------------
+# HTML-generatie
+# --------------------------------------------------
 
-    # 1. Harde uitsluiting op sport (minder generiek gehouden)
-    if any(stop in text for stop in STOP_WORDS):
-        return False
+def generate_html(items, generated_at):
+    by_source = {}
+    for it in items:
+        by_source.setdefault(it["source"], []).append(it)
 
-    # 2. Altijd meenemen als de bron een vaste woon/vastgoedbron is
-    source = (item.get("source") or "").lower()
-    if any(src in source for src in TRUSTED_HOUSING_SOURCES):
-        return True
+    html = [
+        "<!DOCTYPE html><html lang='nl'><head><meta charset='UTF-8'>",
+        "<title>Woonmonitor Dashboard</title>",
+        "<style>",
+        "body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:24px;background:#fafafa;color:#1a1a1a;}",
+        "h1{font-size:1.6rem;} h2{font-size:1.1rem;border-bottom:2px solid #ddd;padding-bottom:6px;margin-top:32px;}",
+        "ul{list-style:none;padding:0;} li{padding:8px 0;border-bottom:1px solid #eee;}",
+        "a{color:#0645ad;text-decoration:none;} a:hover{text-decoration:underline;}",
+        ".meta{color:#777;font-size:0.85rem;} .ts{color:#999;font-size:0.8rem;}",
+        ".prio{font-size:0.75rem;border-radius:4px;padding:2px 6px;margin-left:6px;}",
+        ".prio-high{background:#b91c1c;color:#fff;}",
+        ".prio-medium{background:#f97316;color:#111;}",
+        ".prio-low{background:#e5e7eb;color:#111;}",
+        "</style></head><body>",
+        f"<h1>Woonmonitor Dashboard</h1><p class='meta'>Laatst bijgewerkt: {generated_at}</p>",
+    ]
 
-    # 3. Anders: alleen als er een woon/dakloosheid/grond-keyword in zit
-    return any(kw in text for kw in WOON_KEYWORDS)
+    for source, entries in by_source.items():
+        html.append(f"<h2>{source}</h2><ul>")
+        for e in entries:
+            pub = f"<span class='ts'>{e['published']}</span>" if e.get("published") else ""
+            prio = e.get("priority", "low")
+            prio_class = f"prio prio-{prio}"
+            prio_label = {"high": "PRIO", "medium": "M", "low": "L"}.get(prio, "L")
+            html.append(
+                f"<li><a href='{e['link']}' target='_blank'>{e['title']}</a> "
+                f"<span class='{prio_class}'>{prio_label}</span> {pub}</li>"
+            )
+        html.append("</ul>")
+
+    html.append("</body></html>")
+
+    with open("output/index.html", "w", encoding="utf-8") as f:
+        f.write("\n".join(html))
+
+
+# --------------------------------------------------
+# main()
+# --------------------------------------------------
 
 def main():
     all_items = []
@@ -183,13 +433,21 @@ def main():
         all_items.extend(fetch_rechtspraak_term(term))
         time.sleep(0.3)
 
-      # dedupliceren op titel
+    # dedupliceren op titel
     all_items = dedupe(all_items)
 
-    # alleen relevante woon/vastgoed-items overhouden
-    filtered = [it for it in all_items if is_relevant(it)]
-    print(f"Filtered down from {len(all_items)} to {len(filtered)} relevant items.")
-    all_items = filtered
+    # prioriteit toevoegen en irrelevante items skippen
+    enriched = []
+    for it in all_items:
+        prio = get_priority(it)
+        if prio == "skip":
+            continue
+        it = dict(it)
+        it["priority"] = prio
+        enriched.append(it)
+
+    print(f"Filtered down from {len(all_items)} to {len(enriched)} relevant items.")
+    all_items = enriched
 
     os.makedirs("output", exist_ok=True)
     now = datetime.now(timezone.utc).isoformat()
@@ -198,37 +456,8 @@ def main():
         json.dump({"generated_at": now, "items": all_items}, f, ensure_ascii=False, indent=2)
 
     generate_html(all_items, now)
-    print(f"Done. {len(all_items)} unique items collected.")
+    print(f"Done. {len(all_items)} unique relevant items collected.")
 
-def generate_html(items, generated_at):
-    by_source = {}
-    for it in items:
-        by_source.setdefault(it["source"], []).append(it)
-
-    html = [
-        "<!DOCTYPE html><html lang='nl'><head><meta charset='UTF-8'>",
-        "<title>Woonmonitor Dashboard</title>",
-        "<style>",
-        "body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:24px;background:#fafafa;color:#1a1a1a;}",
-        "h1{font-size:1.6rem;} h2{font-size:1.1rem;border-bottom:2px solid #ddd;padding-bottom:6px;margin-top:32px;}",
-        "ul{list-style:none;padding:0;} li{padding:8px 0;border-bottom:1px solid #eee;}",
-        "a{color:#0645ad;text-decoration:none;} a:hover{text-decoration:underline;}",
-        ".meta{color:#777;font-size:0.85rem;} .ts{color:#999;font-size:0.8rem;}",
-        "</style></head><body>",
-        f"<h1>Woonmonitor Dashboard</h1><p class='meta'>Laatst bijgewerkt: {generated_at}</p>",
-    ]
-
-    for source, entries in by_source.items():
-        html.append(f"<h2>{source}</h2><ul>")
-        for e in entries:
-            pub = f"<span class='ts'>{e['published']}</span>" if e["published"] else ""
-            html.append(f"<li><a href='{e['link']}' target='_blank'>{e['title']}</a> {pub}</li>")
-        html.append("</ul>")
-
-    html.append("</body></html>")
-
-    with open("output/index.html", "w", encoding="utf-8") as f:
-        f.write("\n".join(html))
 
 if __name__ == "__main__":
     main()
