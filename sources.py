@@ -9,6 +9,7 @@ SITE_FEEDS = {
     "NOS Economie": "https://feeds.nos.nl/nosnieuwseconomie",
     "AD": "https://www.ad.nl/rss/overzicht/",
     "Telegraaf": "https://telegraaf.nl/rss",
+    "Follow the Money (FTM)": "https://www.ftm.nl/rss",
     "RTL Nieuws": "https://www.rtlnieuws.nl/service/rss/nieuws/index.xml",
     "Officiele Bekendmakingen": "https://zoek.officielebekendmakingen.nl/rss",
 }
