@@ -11,6 +11,20 @@ import time
 sys.path.insert(0, os.path.dirname(__file__))
 from sources import SITE_FEEDS, SCRAPE_SITES, SEARCH_TERMS, google_news_rss_url, RECHTSPRAAK_TERMS, rechtspraak_rss_url
 
+WOON_KEYWORDS = [
+    "woning", "woningen", "woningmarkt", "huizenmarkt",
+    "huur", "huurt", "huurprijs", "huurprijzen", "huurmarkt",
+    "hypotheek", "hypotheken",
+    "vastgoed", "vastgoedmarkt",
+    "huurwoning", "koopwoning", "huurwoningen", "koopwoningen",
+    "corporatie", "woningcorporatie", "woningcorporaties"
+]
+
+SPORT_BLACKLIST = [
+    "voetbal", "ajax", "feyenoord", "psv", "eredivisie",
+    "champions league", "europa league", "oranje", "wk", "ek"
+]
+
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; WoonMonitorBot/1.0)"}
 TIMEOUT = 15
 
@@ -111,6 +125,22 @@ def dedupe(items):
         result.append(it)
     return result
 
+def is_relevant(item):
+    text = f"{item.get('title','')} {item.get('source','')}".lower()
+
+    # sport wegfilteren
+    for bad in SPORT_BLACKLIST:
+        if bad in text:
+            return False
+
+    # alleen houden als er een woon/vastgoed trefwoord in zit
+    for kw in WOON_KEYWORDS:
+        if kw in text:
+            return True
+
+    # alles zonder trefwoord weggooien
+    return False
+
 def main():
     all_items = []
 
@@ -138,8 +168,13 @@ def main():
         all_items.extend(fetch_rechtspraak_term(term))
         time.sleep(0.3)
 
-    # dedupliceren op titel
+      # dedupliceren op titel
     all_items = dedupe(all_items)
+
+    # alleen relevante woon/vastgoed-items overhouden
+    filtered = [it for it in all_items if is_relevant(it)]
+    print(f"Filtered down from {len(all_items)} to {len(filtered)} relevant items.")
+    all_items = filtered
 
     os.makedirs("output", exist_ok=True)
     now = datetime.now(timezone.utc).isoformat()
