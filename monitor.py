@@ -20,12 +20,11 @@ RSS_FEEDS = [
 ]
 
 HOUSING_TERMS = [
-    "woning", "woningen", "woningmarkt", "wooncrisis", "woonbeleid",
-    "huisvesting", "volkshuisvesting", "woningbouw", "nieuwbouw",
-    "huur", "huurwoning", "huurwoningen", "huurmarkt", "huurprijs",
-    "huurprijzen", "huurder", "huurders", "middenhuur", "sociale huur",
-    "vrije sector", "koopwoning", "koopwoningen", "hypotheek",
-    "doorstroming", "woondeal", "woonwijk", "woonlasten"
+    "woning", "woningen", "woningmarkt", "wooncrisis", "huisvesting",
+    "volkshuisvesting", "woningbouw", "nieuwbouw", "huur", "huurprijs",
+    "huurprijzen", "huurder", "huurders", "huurwoning", "huurwoningen",
+    "middenhuur", "sociale huur", "vrije sector", "koopwoning",
+    "koopwoningen", "hypotheek", "woonlasten", "woondeal"
 ]
 
 HOMELESS_TERMS = [
@@ -34,16 +33,16 @@ HOMELESS_TERMS = [
 ]
 
 REALESTATE_TERMS = [
-    "vastgoed", "vastgoedmarkt", "woningbelegger", "woningbeleggers",
-    "belegger", "beleggers", "portefeuille", "portefeuilles",
+    "vastgoed", "vastgoedmarkt", "belegger", "beleggers",
+    "woningbelegger", "woningbeleggers", "portefeuille",
     "transactie", "transacties", "projectontwikkelaar",
     "projectontwikkelaars", "ontwikkelaar", "ontwikkelaars"
 ]
 
 POLICY_TERMS = [
-    "woonminister", "minister van volkshuisvesting", "volkshuisvesting",
-    "regiewet", "huurbeleid", "woonbeleid", "woningwet",
-    "betaalbaar wonen", "huisvestingswet", "huurtoeslag"
+    "woonbeleid", "huurbeleid", "regiewet", "woningwet",
+    "huisvestingswet", "huurtoeslag", "betaalbaar wonen",
+    "woonminister", "volkshuisvesting"
 ]
 
 def clean_text(value):
@@ -52,32 +51,32 @@ def clean_text(value):
     text = re.sub(r"\s+", " ", text)
     return text.strip()
 
-def contains_term(text, terms):
-    text = f" {text.lower()} "
+def has_term(text, terms):
     for term in terms:
-        if f" {term.lower()} " in text:
+        pattern = r"\b" + re.escape(term.lower()) + r"\b"
+        if re.search(pattern, text.lower()):
             return True
     return False
 
-def matching_terms(text, terms):
-    text = f" {text.lower()} "
-    found = []
+def get_matches(text, terms):
+    matches = []
     for term in terms:
-        if f" {term.lower()} " in text:
-            found.append(term)
-    return found
+        pattern = r"\b" + re.escape(term.lower()) + r"\b"
+        if re.search(pattern, text.lower()):
+            matches.append(term)
+    return matches
 
 def make_tags(title, summary, source_category):
-    text = f"{title} {summary}".lower()
+    text = f"{title} {summary}"
 
     matched_profiles = []
     matched_angles = []
     labels = []
 
-    housing_hits = matching_terms(text, HOUSING_TERMS)
-    homeless_hits = matching_terms(text, HOMELESS_TERMS)
-    realestate_hits = matching_terms(text, REALESTATE_TERMS)
-    policy_hits = matching_terms(text, POLICY_TERMS)
+    housing_hits = get_matches(text, HOUSING_TERMS)
+    homeless_hits = get_matches(text, HOMELESS_TERMS)
+    realestate_hits = get_matches(text, REALESTATE_TERMS)
+    policy_hits = get_matches(text, POLICY_TERMS)
 
     if housing_hits:
         matched_profiles.append("woningmarkt")
@@ -97,12 +96,12 @@ def make_tags(title, summary, source_category):
     return matched_profiles, matched_angles, labels
 
 def is_relevant(title, summary, source_category):
-    text = f"{title} {summary}".lower()
+    text = f"{title} {summary}"
 
-    has_housing = contains_term(text, HOUSING_TERMS)
-    has_homeless = contains_term(text, HOMELESS_TERMS)
-    has_realestate = contains_term(text, REALESTATE_TERMS)
-    has_policy = contains_term(text, POLICY_TERMS)
+    has_housing = has_term(text, HOUSING_TERMS)
+    has_homeless = has_term(text, HOMELESS_TERMS)
+    has_realestate = has_term(text, REALESTATE_TERMS)
+    has_policy = has_term(text, POLICY_TERMS)
 
     if source_category == "policy":
         return has_housing or has_homeless or has_realestate or has_policy
@@ -116,19 +115,13 @@ def parse_feed(feed_conf):
     for entry in parsed.entries[:30]:
         title = clean_text(getattr(entry, "title", ""))
         link = clean_text(getattr(entry, "link", ""))
-        summary = clean_text(
-            getattr(entry, "summary", "") or getattr(entry, "description", "")
-        )
-        published = clean_text(
-            getattr(entry, "published", "") or getattr(entry, "updated", "")
-        )
+        summary = clean_text(getattr(entry, "summary", "") or getattr(entry, "description", ""))
+        published = clean_text(getattr(entry, "published", "") or getattr(entry, "updated", ""))
 
         if not is_relevant(title, summary, feed_conf["source_category"]):
             continue
 
-        matched_profiles, matched_angles, labels = make_tags(
-            title, summary, feed_conf["source_category"]
-        )
+        matched_profiles, matched_angles, labels = make_tags(title, summary, feed_conf["source_category"])
 
         item = {
             "source_id": feed_conf["source_id"],
