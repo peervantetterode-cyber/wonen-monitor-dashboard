@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "source_id": "nos",
+    "source_name": "NOS",
+    "source_category": "media",
+    "source_priority": "high",
+    "title": "Woningen Bilthoven ontruimd om mogelijk gevaarlijke stoffen in auto",
+    "url": "https://nos.nl/l/2625122",
+    "summary": "In Bilthoven bij Utrecht zijn tientallen woningen ontruimd geweest vanwege een auto met daarin mogelijk gevaarlijke stoffen. Om die reden werd er groots opgeschaald door de hulpdiensten. Rond 22.00 uur werden zo'n 40 tot 45 woningen aan de Melkweg ontruimd. Uiteindelijk werden er geen gevaarlijke stoffen in het voertuig gevonden en konden de bewoners rond 01.00 uur weer terug. Twee verdachten die mogelijk betrokken zijn bij het voertuig zijn aangehouden. Wat hun rol is, is niet bekendgemaakt. De politie wil niet zeggen op welke verdenking de twee mannen zijn opgepakt. Ook is nog onduidelijk hoe het voertuig onder de aandacht van de politie is gekomen.",
+    "published_at": "Sat, 1 Aug 2026 00:29:47 +0200",
+    "raw_text": "Woningen Bilthoven ontruimd om mogelijk gevaarlijke stoffen in auto In Bilthoven bij Utrecht zijn tientallen woningen ontruimd geweest vanwege een auto met daarin mogelijk gevaarlijke stoffen. Om die reden werd er groots opgeschaald door de hulpdiensten. Rond 22.00 uur werden zo'n 40 tot 45 woningen aan de Melkweg ontruimd. Uiteindelijk werden er geen gevaarlijke stoffen in het voertuig gevonden en konden de bewoners rond 01.00 uur weer terug. Twee verdachten die mogelijk betrokken zijn bij het voertuig zijn aangehouden. Wat hun rol is, is niet bekendgemaakt. De politie wil niet zeggen op welke verdenking de twee mannen zijn opgepakt. Ook is nog onduidelijk hoe het voertuig onder de aandacht van de politie is gekomen.",
+    "matched_profiles": [
+      "woningmarkt"
+    ],
+    "matched_angles": [],
+    "score": 13,
+    "labels": [
+      "priority"
+    ],
+    "entity_type": null,
+    "political_context": null
+  }
+]
