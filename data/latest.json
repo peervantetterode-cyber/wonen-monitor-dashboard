@@ -15,26 +15,5 @@
     "labels": [],
     "entity_type": null,
     "political_context": null
-  },
-  {
-    "source_id": "nos",
-    "source_name": "NOS",
-    "source_category": "media",
-    "source_priority": "high",
-    "title": "Dode vrouw gevonden in tuin woning Boxtel, bewoner aangehouden",
-    "url": "https://nos.nl/l/2628584",
-    "summary": "In de tuin van een woning aan de Eikengaard in Boxtel is donderdagavond rond 20.45 uur een overleden vrouw gevonden. De politie zegt sterk rekening te houden met een misdrijf. De bewoner van het huis is rond 21.30 uur aangehouden nadat hij zichzelf had gemeld op het politiebureau. De politie zegt dat nog veel onduidelijk is over de aanleiding en de exacte toedracht. De technische recherche doet onderzoek in de tuin. Ook wordt gekeken of er bruikbare camerabeelden zijn en worden mogelijke getuigen gesproken. Volgens Omroep Brabant heeft de brandweer op verzoek van de politie een tent in de tuin geplaatst. Die moet het onderzoek beschermen tegen de hevige regen. De politie roept mensen die mogelijk iets hebben gezien of over informatie beschikken op zich te melden.",
-    "published_at": "Fri, 28 Aug 2026 00:20:23 +0200",
-    "raw_text": "Dode vrouw gevonden in tuin woning Boxtel, bewoner aangehouden In de tuin van een woning aan de Eikengaard in Boxtel is donderdagavond rond 20.45 uur een overleden vrouw gevonden. De politie zegt sterk rekening te houden met een misdrijf. De bewoner van het huis is rond 21.30 uur aangehouden nadat hij zichzelf had gemeld op het politiebureau. De politie zegt dat nog veel onduidelijk is over de aanleiding en de exacte toedracht. De technische recherche doet onderzoek in de tuin. Ook wordt gekeken of er bruikbare camerabeelden zijn en worden mogelijke getuigen gesproken. Volgens Omroep Brabant heeft de brandweer op verzoek van de politie een tent in de tuin geplaatst. Die moet het onderzoek beschermen tegen de hevige regen. De politie roept mensen die mogelijk iets hebben gezien of over informatie beschikken op zich te melden.",
-    "matched_profiles": [
-      "woningmarkt"
-    ],
-    "matched_angles": [],
-    "score": 13,
-    "labels": [
-      "priority"
-    ],
-    "entity_type": null,
-    "political_context": null
   }
 ]
