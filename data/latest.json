@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "source_id": "nos",
+    "source_name": "NOS",
+    "source_category": "media",
+    "source_priority": "high",
+    "title": "Dode vrouw in woning Beek en Donk, politie gaat uit van misdrijf",
+    "url": "https://nos.nl/l/2635296",
+    "summary": "In het Brabantse Beek en Donk, bij Helmond, is om 02.00 uur een dode vrouw gevonden in een huis. De politie gaat ervan uit dat ze door een misdrijf om het leven is gekomen. Er is iemand aangehouden. Het is niet duidelijk hoe de vrouw is omgekomen en wie de aangehouden persoon is. Op beelden is te zien dat de ruiten van de voordeur kapot zijn. De politie zegt dat er onderzoek wordt gedaan naar de toedracht.",
+    "published_at": "Sat, 17 Oct 2026 04:05:45 +0200",
+    "raw_text": "Dode vrouw in woning Beek en Donk, politie gaat uit van misdrijf In het Brabantse Beek en Donk, bij Helmond, is om 02.00 uur een dode vrouw gevonden in een huis. De politie gaat ervan uit dat ze door een misdrijf om het leven is gekomen. Er is iemand aangehouden. Het is niet duidelijk hoe de vrouw is omgekomen en wie de aangehouden persoon is. Op beelden is te zien dat de ruiten van de voordeur kapot zijn. De politie zegt dat er onderzoek wordt gedaan naar de toedracht.",
+    "matched_profiles": [
+      "woningmarkt"
+    ],
+    "matched_angles": [],
+    "score": 13,
+    "labels": [
+      "priority"
+    ],
+    "entity_type": null,
+    "political_context": null
+  }
+]
