@@ -20,5 +20,26 @@
     ],
     "entity_type": null,
     "political_context": null
+  },
+  {
+    "source_id": "nos",
+    "source_name": "NOS",
+    "source_category": "media",
+    "source_priority": "high",
+    "title": "Politie vindt 3D-geprinte boksbeugels en vuurwapens in woning in Eindhoven",
+    "url": "https://nos.nl/l/2639308",
+    "summary": "Bij een inval in een woning in Eindhoven heeft de politie meerdere wapens aangetroffen die met een 3D-printer zijn gemaakt. Het gaat om zes boksbeugels en vijf vuurwapens die gemaakt zijn van 3D-printerplastic. Waarom de politie het huis was binnengevallen, wil een woordvoerder niet zeggen. De inval gebeurde volgens haar naar aanleiding van een onderzoek. Behalve de wapens werden ook twee 3D-printers aangetroffen. De politie zegt dat de woning ingericht lijkt als werkplaats voor dit soort wapens. Gebruik is gevaarlijk Een dergelijke vondst komt volgens de politie relatief weinig voor. Eerder werd verondersteld dat het printen van wapens met dit soort apparaten snel zou toenemen in het criminele circuit, maar dat is niet gebeurd. Volgens de politie is dat dankzij de inspanningen van de autoriteiten, ook die in andere Europese landen. In een wapen dat met 3D is geprint kunnen zowel kogels die met de printer zijn gemaakt als gewone munitie. Niet alleen voor mensen die worden beschoten kunnen de wapens dodelijk zijn, ook voor schutters is het gevaarlijk. De wapens kunnen haperen, smelten of uit elkaar spatten. Ook bezit productiebestand verboden In 2022 werden in Zeeland bij een huiszoeking een 3D-geprint semiautomatisch vuurwapen, vuurwapenonderdelen en een 3D-printer aangetroffen. Vorig jaar zeiden politie en justitie dat ze zich zorgen maken over dit soort dodelijke wapens. Ze zijn lastig te herkennen en lijken op speelgoed, en er is nauwelijks zicht op, bleek uit berichtgeving van Nieuwsuur. Sinds juli dit jaar is de Wet Wapens en munitie aangepast. Daardoor is het strafbaar als iemand 3D-wapens produceert, in het bezit heeft of verkoopt, maar is het ook verboden om een digitaal bestand te hebben waarmee dit soort wapens door een 3D-printer gemaakt wordt.",
+    "published_at": "Fri, 13 Nov 2026 13:37:46 +0100",
+    "raw_text": "Politie vindt 3D-geprinte boksbeugels en vuurwapens in woning in Eindhoven Bij een inval in een woning in Eindhoven heeft de politie meerdere wapens aangetroffen die met een 3D-printer zijn gemaakt. Het gaat om zes boksbeugels en vijf vuurwapens die gemaakt zijn van 3D-printerplastic. Waarom de politie het huis was binnengevallen, wil een woordvoerder niet zeggen. De inval gebeurde volgens haar naar aanleiding van een onderzoek. Behalve de wapens werden ook twee 3D-printers aangetroffen. De politie zegt dat de woning ingericht lijkt als werkplaats voor dit soort wapens. Gebruik is gevaarlijk Een dergelijke vondst komt volgens de politie relatief weinig voor. Eerder werd verondersteld dat het printen van wapens met dit soort apparaten snel zou toenemen in het criminele circuit, maar dat is niet gebeurd. Volgens de politie is dat dankzij de inspanningen van de autoriteiten, ook die in andere Europese landen. In een wapen dat met 3D is geprint kunnen zowel kogels die met de printer zijn gemaakt als gewone munitie. Niet alleen voor mensen die worden beschoten kunnen de wapens dodelijk zijn, ook voor schutters is het gevaarlijk. De wapens kunnen haperen, smelten of uit elkaar spatten. Ook bezit productiebestand verboden In 2022 werden in Zeeland bij een huiszoeking een 3D-geprint semiautomatisch vuurwapen, vuurwapenonderdelen en een 3D-printer aangetroffen. Vorig jaar zeiden politie en justitie dat ze zich zorgen maken over dit soort dodelijke wapens. Ze zijn lastig te herkennen en lijken op speelgoed, en er is nauwelijks zicht op, bleek uit berichtgeving van Nieuwsuur. Sinds juli dit jaar is de Wet Wapens en munitie aangepast. Daardoor is het strafbaar als iemand 3D-wapens produceert, in het bezit heeft of verkoopt, maar is het ook verboden om een digitaal bestand te hebben waarmee dit soort wapens door een 3D-printer gemaakt wordt.",
+    "matched_profiles": [
+      "woningmarkt"
+    ],
+    "matched_angles": [],
+    "score": 13,
+    "labels": [
+      "priority"
+    ],
+    "entity_type": null,
+    "political_context": null
   }
 ]
