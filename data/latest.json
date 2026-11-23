@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "source_id": "nos",
+    "source_name": "NOS",
+    "source_category": "media",
+    "source_priority": "high",
+    "title": "Jongetje (1) dat van driehoog uit Amsterdamse woning viel, heeft val overleefd",
+    "url": "https://nos.nl/l/2640703",
+    "summary": "Het 1-jarige jongetje dat 30 oktober van driehoog uit een raam van een woning in Amsterdam viel, leeft nog. Dat meldt de politie. Hoe het nu met het kind gaat, wordt niet vermeld. Het jongetje werd die vrijdagochtend zwaargewond op de Amstelveenseweg aangetroffen door een omstander die meteen de hulpdiensten waarschuwde. Ambulancepersoneel verleende eerste hulp en bracht het kind naar het ziekenhuis. Het is niet bekend hoe het jongetje uit het raam kon vallen. Direct na het ongeval startte de recherche een onderzoek naar de toedracht. Dat onderzoek loopt nog. De politie roept getuigen en mensen die videobeelden hebben van het incident op om zich te melden. Buurtbewoners reageerden geschokt op de val van het jongetje. \"Dit is een nachtmerrie waar elke ouder, oma, opa bang voor is\", zei een van hen tegen stadsomroep AT5 . \"Ik ben in shock\", zei een andere buurtbewoner. \"Ik hoop dat alles weer beter wordt. Ik bid voor dat kind.\"",
+    "published_at": "Mon, 23 Nov 2026 13:40:22 +0100",
+    "raw_text": "Jongetje (1) dat van driehoog uit Amsterdamse woning viel, heeft val overleefd Het 1-jarige jongetje dat 30 oktober van driehoog uit een raam van een woning in Amsterdam viel, leeft nog. Dat meldt de politie. Hoe het nu met het kind gaat, wordt niet vermeld. Het jongetje werd die vrijdagochtend zwaargewond op de Amstelveenseweg aangetroffen door een omstander die meteen de hulpdiensten waarschuwde. Ambulancepersoneel verleende eerste hulp en bracht het kind naar het ziekenhuis. Het is niet bekend hoe het jongetje uit het raam kon vallen. Direct na het ongeval startte de recherche een onderzoek naar de toedracht. Dat onderzoek loopt nog. De politie roept getuigen en mensen die videobeelden hebben van het incident op om zich te melden. Buurtbewoners reageerden geschokt op de val van het jongetje. \"Dit is een nachtmerrie waar elke ouder, oma, opa bang voor is\", zei een van hen tegen stadsomroep AT5 . \"Ik ben in shock\", zei een andere buurtbewoner. \"Ik hoop dat alles weer beter wordt. Ik bid voor dat kind.\"",
+    "matched_profiles": [
+      "woningmarkt"
+    ],
+    "matched_angles": [],
+    "score": 13,
+    "labels": [
+      "priority"
+    ],
+    "entity_type": null,
+    "political_context": null
+  },
+  {
+    "source_id": "nos",
+    "source_name": "NOS",
+    "source_category": "media",
+    "source_priority": "high",
+    "title": "Vrouw (90) overleden bij woningbrand in Zuidlaren",
+    "url": "https://nos.nl/l/2640692",
+    "summary": "Bij een brand in Zuidlaren is een 90-jarige vrouw om het leven gekomen, meldt RTV Drenthe . De brand brak rond 05.30 uur uit in haar woning. Een buurvrouw alarmeerde de hulpdiensten. De vrouw is nog gereanimeerd, maar dat mocht niet baten. Het slachtoffer overleed ter plaatse. Het is niet duidelijk hoe de brand ontstond, de politie is nog bezig met onderzoek. Rondom de woning zijn afzetlinten geplaatst.",
+    "published_at": "Mon, 23 Nov 2026 12:05:43 +0100",
+    "raw_text": "Vrouw (90) overleden bij woningbrand in Zuidlaren Bij een brand in Zuidlaren is een 90-jarige vrouw om het leven gekomen, meldt RTV Drenthe . De brand brak rond 05.30 uur uit in haar woning. Een buurvrouw alarmeerde de hulpdiensten. De vrouw is nog gereanimeerd, maar dat mocht niet baten. Het slachtoffer overleed ter plaatse. Het is niet duidelijk hoe de brand ontstond, de politie is nog bezig met onderzoek. Rondom de woning zijn afzetlinten geplaatst.",
+    "matched_profiles": [
+      "woningmarkt"
+    ],
+    "matched_angles": [],
+    "score": 13,
+    "labels": [
+      "priority"
+    ],
+    "entity_type": null,
+    "political_context": null
+  }
+]
